@@ -20,6 +20,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: withastro/action@v3
+        env:
+          # Remove SITE_BASE once scoffblog.com DNS points at GitHub Pages (site then serves from /).
+          SITE_BASE: /scoffblog
         with:
           node-version: 22
 

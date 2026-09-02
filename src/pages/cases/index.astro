@@ -1,4 +1,5 @@
 ---
+import { u } from '../../lib';
 import Base from '../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 import { right, chev } from '../../components';
@@ -9,9 +10,9 @@ const cases = await getCollection('cases');
   <div class="wrap">
     <div class="tiles">
       <div class="tile"><h3>Oral Arguments Docket</h3><p>Cases granted, argued, and decided this term.</p><a class="browse" href="#docket">Browse <Fragment set:html={right} /></a></div>
-      <div class="tile"><h3>Petitions</h3><p>Track relisted trade challenges, upcoming conferences, and invitations to the Commissioner to explain himself.</p><a class="browse" href="/news">Browse <Fragment set:html={right} /></a></div>
-      <div class="tile"><h3>Interim Docket</h3><p>Emergency applications, motions to compel, and anything filed from an Uber.</p><a class="browse" href="/emergency-docket">Browse <Fragment set:html={right} /></a></div>
-      <div class="tile"><h3>Capital Cases</h3><p>Disputes in which a league member has threatened to quit.</p><a class="browse" href="/news">Browse <Fragment set:html={right} /></a></div>
+      <div class="tile"><h3>Petitions</h3><p>Track relisted trade challenges, upcoming conferences, and invitations to the Commissioner to explain himself.</p><a class="browse" href={u("/news")}>Browse <Fragment set:html={right} /></a></div>
+      <div class="tile"><h3>Interim Docket</h3><p>Emergency applications, motions to compel, and anything filed from an Uber.</p><a class="browse" href={u("/emergency-docket")}>Browse <Fragment set:html={right} /></a></div>
+      <div class="tile"><h3>Capital Cases</h3><p>Disputes in which a league member has threatened to quit.</p><a class="browse" href={u("/news")}>Browse <Fragment set:html={right} /></a></div>
     </div>
     <div class="list-head" id="docket">Oral Arguments Docket by Term</div>
     <div class="acc" style="margin-bottom:70px">
@@ -19,7 +20,7 @@ const cases = await getCollection('cases');
       <table class="docket">
         <thead><tr><th>Docket</th><th>Case</th><th>Question presented</th><th>Status</th></tr></thead>
         <tbody>
-          {cases.map(c => <tr><td class="n">{c.data.docket}</td><td><a href={`/cases/${c.id}`}>{c.data.title}</a></td><td>{c.data.issues[0]}</td><td class="n">{c.data.status}</td></tr>)}
+          {cases.map(c => <tr><td class="n">{c.data.docket}</td><td><a href={u(`/cases/${c.id}`)}>{c.data.title}</a></td><td>{c.data.issues[0]}</td><td class="n">{c.data.status}</td></tr>)}
         </tbody>
       </table>
     </div>

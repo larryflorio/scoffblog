@@ -1,4 +1,5 @@
 ---
+import { u } from '../lib';
 import Base from '../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 import { fmt, fmtShort, byDate } from '../lib';
@@ -38,18 +39,18 @@ const authors = [
     <div class="col left">
       {leftCol.map((p, i) => (
         <div>
-          <a href={`/news/${p.id}`} class="thumb"><img src={thumbs[i % 2]} alt="" loading="lazy" /></a>
+          <a href={u(`/news/${p.id}`)} class="thumb"><img src={u(thumbs[i % 2])} alt="" loading="lazy" /></a>
           <span class="kicker">{p.data.kicker}</span>
-          <h3 class="headline"><a href={`/news/${p.id}`}>{p.data.title}</a></h3>
+          <h3 class="headline"><a href={u(`/news/${p.id}`)}>{p.data.title}</a></h3>
           <Fragment set:html={Byline(p)} />
         </div>
       ))}
     </div>
     <div class="col center">
       <div>
-        <a href={`/news/${lead.id}`} class="thumb tall seal"><Fragment set:html={seal} /></a>
+        <a href={u(`/news/${lead.id}`)} class="thumb tall seal"><Fragment set:html={seal} /></a>
         <span class="kicker">{lead.data.kicker}</span>
-        <h3 class="headline"><a href={`/news/${lead.id}`}>{lead.data.title}</a></h3>
+        <h3 class="headline"><a href={u(`/news/${lead.id}`)}>{lead.data.title}</a></h3>
         <Fragment set:html={Byline(lead)} />
       </div>
     </div>
@@ -57,20 +58,20 @@ const authors = [
       {rightCol.map(p => (
         <div>
           <span class="kicker">{p.data.kicker}</span>
-          <h3 class="headline"><a href={`/news/${p.id}`}>{p.data.title}</a></h3>
+          <h3 class="headline"><a href={u(`/news/${p.id}`)}>{p.data.title}</a></h3>
           <Fragment set:html={Byline(p)} />
         </div>
       ))}
       {cases.map(c => (
         <div>
           <span class="kicker">Merits Case</span>
-          <h3 class="headline"><a href={`/cases/${c.id}`}>{c.data.title}</a></h3>
+          <h3 class="headline"><a href={u(`/cases/${c.id}`)}>{c.data.title}</a></h3>
           <div class="byline"><span class="date">No. {c.data.docket}</span><span class="sep">/</span><span class="date">{c.data.status}</span></div>
         </div>
       ))}
       <div>
         <span class="kicker">SCOFFblog Summit</span>
-        <h3 class="headline"><a href="/calendar">Back-to-School Night</a></h3>
+        <h3 class="headline"><a href={u("/calendar")}>Back-to-School Night</a></h3>
         <div class="byline"><span class="date">Tuesday, September 8, 2026</span></div>
       </div>
     </div>
@@ -78,15 +79,15 @@ const authors = [
 
   <div class="wrap">
     <div class="summit">
-      <div class="img"><img src="/exhibits/26-FF-0831-order.png" alt="" loading="lazy" /></div>
+      <div class="img"><img src={u("/exhibits/26-FF-0831-order.png")} alt="" loading="lazy" /></div>
       <div class="txt">
         <h3>Plenary Power and its Limits</h3>
         <p>A conversation between Marc Goldich, Pro Se, and the Office of the Clerk [trash bin], moderated by nobody, because Commissioner Dylus is not reading this essay.</p>
-        <a class="btn ruby" href="/cases/26-1-goldich-v-dylus">Read the full filings <Fragment set:html={arrow} /></a>
+        <a class="btn ruby" href={u("/cases/26-1-goldich-v-dylus")}>Read the full filings <Fragment set:html={arrow} /></a>
       </div>
     </div>
 
-    <div class="sec-head"><h2>Upcoming</h2><a class="btn" href="/calendar">Full Calendar <Fragment set:html={right} /></a></div>
+    <div class="sec-head"><h2>Upcoming</h2><a class="btn" href={u("/calendar")}>Full Calendar <Fragment set:html={right} /></a></div>
     <div class="legend">
       <span style="--c:var(--oral)">Oral Argument</span><span style="--c:var(--verdant)">Conference</span><span style="--c:var(--ember)">Opinion</span><span style="--c:var(--mustard)">Orders</span><span style="--c:var(--navy)">Draft</span><span style="--c:var(--holiday)">Holiday</span>
     </div>
@@ -111,7 +112,7 @@ const authors = [
 
   <div class="wrap latest">
     <h2>Latest</h2>
-    <a class="hero" href={`/news/${lead.id}`}>
+    <a class="hero" href={u(`/news/${lead.id}`)}>
       <div class="bg"><Fragment set:html={seal} /></div>
       <div class="inner">
         <span class="kicker">{lead.data.kicker}</span>
@@ -123,7 +124,7 @@ const authors = [
   <div class="band">
     <div class="wrap">
       <div class="grid3">
-        {others.map(p => <div><span class="kicker">{p.data.kicker}</span><h3 class="headline"><a href={`/news/${p.id}`}>{p.data.title}</a></h3><div class="byline"><i>By</i> <span class="name">{p.data.author}</span><span class="sep">/</span><span class="date">{fmtShort(p.data.date)}</span></div></div>)}
+        {others.map(p => <div><span class="kicker">{p.data.kicker}</span><h3 class="headline"><a href={u(`/news/${p.id}`)}>{p.data.title}</a></h3><div class="byline"><i>By</i> <span class="name">{p.data.author}</span><span class="sep">/</span><span class="date">{fmtShort(p.data.date)}</span></div></div>)}
       </div>
     </div>
   </div>
@@ -138,7 +139,7 @@ const authors = [
         <div class="stat"><b>{decided}</b><span>Decisions Issued</span></div>
         <div class="stat"><b>{pending}</b><span>Pending Decisions</span></div>
       </div>
-      <a class="btn solid" href="/cases">View Oral Argument Docket</a>
+      <a class="btn solid" href={u("/cases")}>View Oral Argument Docket</a>
     </div>
   </div>
 
@@ -147,7 +148,7 @@ const authors = [
       <h2>More News &amp; Commentary</h2>
       <div class="filters"><span class="on">All</span><span>Court News</span><span>Commentary</span><span>Emergency Docket</span></div>
       <div class="grid3">
-        {posts.map(p => <div><span class="kicker">{p.data.kicker}</span><h3 class="headline"><a href={`/news/${p.id}`}>{p.data.title}</a></h3><div class="byline"><i>By</i> <span class="name">{p.data.author}</span><span class="sep">/</span><span class="date">{fmtShort(p.data.date)}</span></div></div>)}
+        {posts.map(p => <div><span class="kicker">{p.data.kicker}</span><h3 class="headline"><a href={u(`/news/${p.id}`)}>{p.data.title}</a></h3><div class="byline"><i>By</i> <span class="name">{p.data.author}</span><span class="sep">/</span><span class="date">{fmtShort(p.data.date)}</span></div></div>)}
       </div>
     </div>
   </div>
@@ -155,8 +156,8 @@ const authors = [
   <div class="wrap authors">
     <div class="sec-head"><h2>Latest from our authors</h2><span><a class="btn" style="height:36px;padding:0 12px"><Fragment set:html={left} /></a> <a class="btn" style="height:36px;padding:0 12px"><Fragment set:html={right} /></a></span></div>
     <div class="row">
-      {authors.map(a => <div class="acard"><div class="top">{a.role}</div><div class="body"><span class="kicker">{a.p.data.kicker}</span><h3 class="headline"><a href={`/news/${a.p.id}`}>{a.p.data.title}</a></h3><Fragment set:html={Byline(a.p)} /></div></div>)}
+      {authors.map(a => <div class="acard"><div class="top">{a.role}</div><div class="body"><span class="kicker">{a.p.data.kicker}</span><h3 class="headline"><a href={u(`/news/${a.p.id}`)}>{a.p.data.title}</a></h3><Fragment set:html={Byline(a.p)} /></div></div>)}
     </div>
-    <div class="meet"><a class="btn solid" href="/justices">Meet the Team <Fragment set:html={right} /></a></div>
+    <div class="meet"><a class="btn solid" href={u("/justices")}>Meet the Team <Fragment set:html={right} /></a></div>
   </div>
 </Base>

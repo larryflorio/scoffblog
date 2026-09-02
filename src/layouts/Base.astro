@@ -1,4 +1,5 @@
 ---
+import { u } from '../lib';
 import '../styles/global.css';
 import { chev, search, person } from '../components';
 interface Props { title?: string; description?: string; current?: string }
@@ -16,44 +17,44 @@ const fullTitle = title ? `${title} | SCOFFblog` : 'SCOFFblog: Independent news 
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href={u("/favicon.svg")} type="image/svg+xml" />
   </head>
   <body>
     <div class="utility">
       <div class="wrap">
         <nav>
-          <a href="/cases">Cases<Fragment set:html={chev} /></a>
-          <a href="/statistics">Statistics<Fragment set:html={chev} /></a>
-          <a href="/calendar">Calendar</a>
-          <a href="/justices">Justices</a>
+          <a href={u("/cases")}>Cases<Fragment set:html={chev} /></a>
+          <a href={u("/statistics")}>Statistics<Fragment set:html={chev} /></a>
+          <a href={u("/calendar")}>Calendar</a>
+          <a href={u("/justices")}>Justices</a>
         </nav>
         <div class="tools">
-          <a href="/cases" aria-label="Search"><Fragment set:html={search} /></a>
-          <a href="/about" class="login"><Fragment set:html={person} /> Login</a>
+          <a href={u("/cases")} aria-label="Search"><Fragment set:html={search} /></a>
+          <a href={u("/about")} class="login"><Fragment set:html={person} /> Login</a>
         </div>
       </div>
     </div>
     <header class="masthead">
       <div class="wrap">
         <nav class="left">
-          <a href="/news">News<Fragment set:html={chev} /></a>
-          <a href="/news">Commentary<Fragment set:html={chev} /></a>
-          <a href="/about">About<Fragment set:html={chev} /></a>
+          <a href={u("/news")}>News<Fragment set:html={chev} /></a>
+          <a href={u("/news")}>Commentary<Fragment set:html={chev} /></a>
+          <a href={u("/about")}>About<Fragment set:html={chev} /></a>
         </nav>
-        <a class="wordmark" href="/" aria-label="SCOFFblog"><b>SCOFF</b>blog</a>
+        <a class="wordmark" href={u("/")} aria-label="SCOFFblog"><b>SCOFF</b>blog</a>
         <nav class="right">
-          <a href="/about">Newsletters<Fragment set:html={chev} /></a>
-          <a href="/about">Podcasts<Fragment set:html={chev} /></a>
-          <a class="subscribe" href="/about">Subscribe</a>
+          <a href={u("/about")}>Newsletters<Fragment set:html={chev} /></a>
+          <a href={u("/about")}>Podcasts<Fragment set:html={chev} /></a>
+          <a class="subscribe" href={u("/about")}>Subscribe</a>
         </nav>
       </div>
     </header>
     <div class="secondary">
       <div class="wrap">
-        <a href="/cases">Merits Cases</a>
-        <a href="/news">Court News</a>
-        <a href="/news">Explainers</a>
-        <a href="/emergency-docket">Emergency appeals and applications</a>
+        <a href={u("/cases")}>Merits Cases</a>
+        <a href={u("/news")}>Court News</a>
+        <a href={u("/news")}>Explainers</a>
+        <a href={u("/emergency-docket")}>Emergency appeals and applications</a>
       </div>
     </div>
     <main>
@@ -80,15 +81,15 @@ const fullTitle = title ? `${title} | SCOFFblog` : 'SCOFFblog: Independent news 
           <div class="wordmark"><b>SCOFF</b>blog</div>
           <p class="blurb">The premier source for Supreme Court of Fantasy Football news, analysis, and data since Tuesday. Independent and non-partisan, except as to the Commissioner.</p>
         </div>
-        <div><h5>Coverage</h5><ul><li><a href="/news">Latest News</a></li><li><a href="/news">Recurring Columns</a></li><li><a href="/news">Outside Opinions</a></li><li><a href="/emergency-docket">Interim Docket Blog</a></li></ul></div>
-        <div><h5>Cases</h5><ul><li><a href="/cases">Oral Argument Docket</a></li><li><a href="/emergency-docket">Interim Docket</a></li><li><a href="/cases">Petitions</a></li><li><a href="/cases">Capital Cases</a></li><li><a href="/calendar">Calendar</a></li><li><a href="/statistics">Statistics</a></li></ul></div>
-        <div><h5>Podcasts</h5><ul><li><a href="/about">Advisory Opinions</a></li><li><a href="/about">Divided Argument</a></li><li><a href="/about">Waiver Wire Watch</a></li></ul></div>
-        <div><h5>Newsletters</h5><ul><li><a href="/about">SCOFFtoday</a></li><li><a href="/about">SCOFF Opinions</a></li></ul></div>
-        <div><h5>About</h5><ul><li><a href="/about">Manifesto</a></li><li><a href="/justices">Staff</a></li><li><a href="/about">Contact Us</a></li><li><a href="/about">Submissions</a></li><li><a href="/about">FAQs</a></li><li><a href="/about">Merch</a></li></ul></div>
+        <div><h5>Coverage</h5><ul><li><a href={u("/news")}>Latest News</a></li><li><a href={u("/news")}>Recurring Columns</a></li><li><a href={u("/news")}>Outside Opinions</a></li><li><a href={u("/emergency-docket")}>Interim Docket Blog</a></li></ul></div>
+        <div><h5>Cases</h5><ul><li><a href={u("/cases")}>Oral Argument Docket</a></li><li><a href={u("/emergency-docket")}>Interim Docket</a></li><li><a href={u("/cases")}>Petitions</a></li><li><a href={u("/cases")}>Capital Cases</a></li><li><a href={u("/calendar")}>Calendar</a></li><li><a href={u("/statistics")}>Statistics</a></li></ul></div>
+        <div><h5>Podcasts</h5><ul><li><a href={u("/about")}>Advisory Opinions</a></li><li><a href={u("/about")}>Divided Argument</a></li><li><a href={u("/about")}>Waiver Wire Watch</a></li></ul></div>
+        <div><h5>Newsletters</h5><ul><li><a href={u("/about")}>SCOFFtoday</a></li><li><a href={u("/about")}>SCOFF Opinions</a></li></ul></div>
+        <div><h5>About</h5><ul><li><a href={u("/about")}>Manifesto</a></li><li><a href={u("/justices")}>Staff</a></li><li><a href={u("/about")}>Contact Us</a></li><li><a href={u("/about")}>Submissions</a></li><li><a href={u("/about")}>FAQs</a></li><li><a href={u("/about")}>Merch</a></li></ul></div>
       </div>
       <div class="bottom">
         <div class="copy"><span>SC</span> &copy; 2026 SCOFFblog. All rights reserved, none enforced.</div>
-        <div class="legal"><a href="/news">Archive</a><a href="/about">Privacy Policy</a><a href="/about">Editorial Policy</a><a href="/about">Terms of Use</a></div>
+        <div class="legal"><a href={u("/news")}>Archive</a><a href={u("/about")}>Privacy Policy</a><a href={u("/about")}>Editorial Policy</a><a href={u("/about")}>Terms of Use</a></div>
       </div>
       <div class="disclaimer">SCOFFblog is a work of satire about a fantasy football league. It is not affiliated with, endorsed by, or in any way connected to SCOTUSblog, the Supreme Court of the United States, or any actual court. No opinion published here is legal advice, a legal opinion, or binding on anyone, including the Commissioner, who has said as much.</div>
     </footer>

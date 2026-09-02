@@ -1,4 +1,5 @@
 ---
+import { u } from '../../lib';
 import Base from '../../layouts/Base.astro';
 import { getCollection, render } from 'astro:content';
 import { fmtShort, byDate } from '../../lib';
@@ -24,7 +25,7 @@ const cls = (e: string) => /(notice|motion|brief)[^.]*\bfiled\b/i.test(e) ? 'bri
         <div><label>Docket No.</label><a href="#">{c.data.docket}</a></div>
         <div><label>Op. Below</label><a href="#">{c.data.lowerDocket ?? 'Commissioner'}</a></div>
         <div><label>Argument</label>{c.data.argued ? fmtShort(c.data.argued) : 'Sep 6, 2026'}</div>
-        <div><label>Term</label><a href="/cases">{c.data.term}</a></div>
+        <div><label>Term</label><a href={u("/cases")}>{c.data.term}</a></div>
         {c.data.decided && <div><label>Decided</label>{fmtShort(c.data.decided)}</div>}
       </div>
       <a class="btn" href={c.data.external[0]?.href ?? '#'} target="_blank" rel="noopener">Original filing <Fragment set:html={arrow} /></a>
@@ -39,13 +40,13 @@ const cls = (e: string) => /(notice|motion|brief)[^.]*\bfiled\b/i.test(e) ? 'bri
       <div class="prose" style="margin-top:40px"><Content /></div>
       {c.data.exhibits.length > 0 && <div class="exhibits">
         <h2>Filings</h2>
-        {c.data.exhibits.map(e => <figure class="exhibit"><a href={e.pdf ?? e.src} target="_blank" rel="noopener"><img src={e.src} alt={e.label} loading="lazy" /></a><figcaption>{e.label}{e.pdf && <> <a href={e.pdf} target="_blank" rel="noopener" style="color:var(--navy);text-decoration:underline">Download</a></>}</figcaption></figure>)}
+        {c.data.exhibits.map(e => <figure class="exhibit"><a href={u(e.pdf ?? e.src)} target="_blank" rel="noopener"><img src={u(e.src)} alt={e.label} loading="lazy" /></a><figcaption>{e.label}{e.pdf && <> <a href={u(e.pdf)} target="_blank" rel="noopener" style="color:var(--navy);text-decoration:underline">Download</a></>}</figcaption></figure>)}
       </div>}
     </section>
     <aside class="side">
-      <div class="crumbs"><a href="/cases">Cases</a><span>/</span><a href="/cases">{c.data.term}</a></div>
+      <div class="crumbs"><a href={u("/cases")}>Cases</a><span>/</span><a href={u("/cases")}>{c.data.term}</a></div>
       <div><h4>Share</h4><div class="share"><a href="#" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied';return false;">Copy</a><a href={`https://x.com/intent/post?text=${encodeURIComponent(c.data.title)}&url=${encodeURIComponent(`https://scoffblog.com/cases/${c.id}`)}`} target="_blank" rel="noopener">Twitter</a><a href={`mailto:?subject=${encodeURIComponent(c.data.title)}`}>Email</a></div></div>
-      {posts.length > 0 && <div class="rel"><h4>Related Coverage</h4>{posts.map(p => <div style="margin-bottom:18px"><h3 class="headline"><a href={`/news/${p.id}`}>{p.data.title}</a></h3><div class="byline" style="font-variant:normal"><span class="date" style="font-variant:normal;letter-spacing:0;color:var(--ink-3)">{fmtShort(p.data.date)} &middot; {p.data.author}</span></div></div>)}</div>}
+      {posts.length > 0 && <div class="rel"><h4>Related Coverage</h4>{posts.map(p => <div style="margin-bottom:18px"><h3 class="headline"><a href={u(`/news/${p.id}`)}>{p.data.title}</a></h3><div class="byline" style="font-variant:normal"><span class="date" style="font-variant:normal;letter-spacing:0;color:var(--ink-3)">{fmtShort(p.data.date)} &middot; {p.data.author}</span></div></div>)}</div>}
       {c.data.external.length > 0 && <div><h4>Elsewhere</h4><div class="rows">{c.data.external.map(x => <a href={x.href} target="_blank" rel="noopener">{x.label}</a>)}</div></div>}
     </aside>
   </div>
