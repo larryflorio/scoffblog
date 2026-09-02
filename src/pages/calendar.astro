@@ -14,7 +14,7 @@ const events = [
   <div class="hero-band"><h1>Calendar</h1><p>Arguments, conferences, opinions, orders, and the draft.</p></div>
   <div class="wrap" style="padding-top:44px;padding-bottom:70px">
     <div class="legend"><span style="--c:var(--oral)">Oral Argument</span><span style="--c:var(--verdant)">Conference</span><span style="--c:var(--ember)">Opinion</span><span style="--c:var(--mustard)">Orders</span><span style="--c:var(--navy)">Draft</span></div>
-    <div class="next"><div class="cards" style="grid-template-columns:1fr 1fr 1fr">
+    <div class="next"><div class="cards cards-3">
       {events.map(([c, d, w, k]) => <div class="ev" style={`--c:var(--${c})`}><div class="when">{d}</div><div class="what">{w}</div><div class="case" style="font-style:normal;color:var(--ink-2)">{k}</div><Fragment set:html={building} /></div>)}
     </div></div>
   </div>

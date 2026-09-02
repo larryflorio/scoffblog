@@ -268,7 +268,46 @@ table.docket td.n { white-space: nowrap; color: var(--ink-3); }
   .masthead nav.left, .masthead nav.right span.hide { display: none; }
   .masthead .wrap { grid-template-columns: 1fr auto; }
 }
+.cards-3 { grid-template-columns: 1fr 1fr 1fr; }
+.stats-3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 1100px) { .cards-3 { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 720px) {
+  .cards-3, .next .cards { grid-template-columns: 1fr; }
+  .stats-3 { grid-template-columns: 1fr 1fr; }
+  .hero-band { padding: 34px 20px 30px; }
+  .hero-band h1 { font-size: 34px; margin-bottom: 8px; }
+  .hero-band p { font-size: 15px; }
+  .legend { gap: 12px 20px; font-size: 15px; margin-bottom: 20px; }
+  .ev { padding: 18px 20px 22px; min-height: 0; }
+  .ev svg { right: 18px; bottom: 16px; }
+  .front .col > * + * { margin-top: 28px; }
+  .summit .img { min-height: 0; max-height: 220px; }
+  .summit .txt { padding: 20px; }
+  .upcoming { gap: 24px; }
+  .cal td { height: 52px; padding-top: 10px; font-size: 14px; }
+  .cal .bar { padding: 0 14px; font-size: 12px; }
+  .term { padding: 40px 0; }
+  .stat { padding: 26px 8px 22px; }
+  .stat b { font-size: 36px; margin-bottom: 14px; }
+  .stat span { font-size: 14px; }
+  .more .filters { flex-wrap: wrap; }
+  .acard .top { height: 90px; }
+  .two { padding: 28px 0 50px; }
+  .article-head h1 { margin: 10px 0 16px; }
+  .lede { font-size: 16px; }
+  .prose { font-size: 16.5px; }
+  .case .btn { margin: 20px 0 28px; }
+  .tl-head { flex-wrap: wrap; gap: 8px; }
+  .tl li { grid-template-columns: 80px 1fr 28px; padding: 10px 8px; }
+  .tl .d { margin-right: 10px; padding-right: 6px; font-size: 13px; }
+  .meta > div { padding: 12px 0; }
+  .share { gap: 8px; }
+  .side > * + * { margin-top: 22px; }
+  .plain-list { padding: 28px 0 50px; }
+  .plain-list h1 { font-size: 30px; margin-bottom: 20px; }
+  table.docket th:nth-child(3), table.docket td:nth-child(3) { display: none; }
+  table.docket th, table.docket td { padding: 12px 10px; font-size: 14px; }
+  .tile { padding: 20px; }
   body { font-size: 16px; }
   .utility .wrap { gap: 10px; }
   .utility nav { gap: 12px; font-size: 11px; overflow-x: auto; white-space: nowrap; }
