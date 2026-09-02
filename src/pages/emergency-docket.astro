@@ -1,0 +1,21 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { fmtShort, byDate } from '../lib';
+const posts = (await getCollection('posts')).filter(p => p.data.kicker === 'EMERGENCY DOCKET').sort(byDate);
+---
+<Base title="Emergency Docket" current="/emergency-docket">
+  <div class="wrap" style="max-width:820px;padding-top:32px;padding-bottom:60px">
+    <div class="section-head"><h2>Emergency Docket</h2></div>
+    <p style="color:var(--ink-2)">Applications for emergency relief, motions to compel, and anything filed after 11 p.m. The Court acts on these without argument, without briefing, and frequently without reading them, a practice it inherited from the court below.</p>
+    {posts.length === 0 && <p>No applications pending.</p>}
+    {posts.map(p => (
+      <div class="card">
+        <div class="kicker">{p.data.kicker}</div>
+        <h3><a href={`/news/${p.id}`}>{p.data.title}</a></h3>
+        {p.data.dek && <p class="dek">{p.data.dek}</p>}
+        <div class="byline">By <b>{p.data.author}</b> / {fmtShort(p.data.date)}</div>
+      </div>
+    ))}
+  </div>
+</Base>

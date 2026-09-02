@@ -1,0 +1,23 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+const cases = await getCollection('cases');
+---
+<Base title="Cases" current="/cases">
+  <div class="wrap" style="max-width:920px;padding-top:32px;padding-bottom:60px">
+    <div class="section-head"><h2>Week 1 Term 2026 Docket</h2></div>
+    <table class="docket-table">
+      <thead><tr><th>Docket</th><th>Case</th><th>Question presented</th><th>Status</th></tr></thead>
+      <tbody>
+        {cases.map(c => (
+          <tr>
+            <td class="n">{c.data.docket}</td>
+            <td><a href={`/cases/${c.id}`}><b>{c.data.title}</b></a></td>
+            <td>{c.data.issues[0]}</td>
+            <td class="n">{c.data.status}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</Base>

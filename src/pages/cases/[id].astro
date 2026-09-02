@@ -1,0 +1,45 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+import { fmtShort, byDate } from '../../lib';
+export async function getStaticPaths() {
+  const cases = await getCollection('cases');
+  return cases.map(c => ({ params: { id: c.id }, props: { c } }));
+}
+const { c } = Astro.props;
+const { Content } = await render(c);
+const posts = (await getCollection('posts')).filter(p => p.data.case === c.id).sort(byDate);
+---
+<Base title={c.data.title} description={c.data.issues[0]} current="/cases">
+  <div class="wrap case">
+    <section>
+      <div class="kicker">{c.data.term}</div>
+      <h1>{c.data.title}<span class="status">{c.data.status}</span></h1>
+      <div class="docket-line">Docket No. {c.data.docket}{c.data.lowerDocket && <> &middot; Below: {c.data.lowerDocket}</>}{c.data.granted && <> &middot; Granted {fmtShort(c.data.granted)}</>}{c.data.argued && <> &middot; Argued {fmtShort(c.data.argued)}</>}{c.data.decided && <> &middot; Decided {fmtShort(c.data.decided)}</>}</div>
+      <div class="issues">
+        <h2>Issues</h2>
+        <ol>{c.data.issues.map(i => <li>{i}</li>)}</ol>
+        {c.data.holding && <p style="margin:12px 0 0"><b>Holding:</b> {c.data.holding}</p>}
+      </div>
+      <div class="prose"><Content /></div>
+      {c.data.exhibits.length > 0 && <>
+        <div class="section-head" style="margin-top:30px"><h2>Filings</h2></div>
+        {c.data.exhibits.map(e => <figure class="exhibit" style="margin:0 0 24px"><a href={e.src} target="_blank" rel="noopener"><img src={e.src} alt={e.label} loading="lazy" /></a><figcaption>{e.label}</figcaption></figure>)}
+      </>}
+    </section>
+    <aside>
+      <div class="box">
+        <h4>Proceedings and orders</h4>
+        <ul class="timeline">{c.data.timeline.map(t => <li><span class="d">{t.date}</span><span set:html={t.entry} /></li>)}</ul>
+      </div>
+      {posts.length > 0 && <div class="box">
+        <h4>Coverage</h4>
+        <ul class="events">{posts.map(p => <li><span class="d">{fmtShort(p.data.date)}</span><span><span class="t">{p.data.kicker}</span><a href={`/news/${p.id}`}>{p.data.title}</a></span></li>)}</ul>
+      </div>}
+      {c.data.external.length > 0 && <div class="box">
+        <h4>Elsewhere</h4>
+        <ul class="events">{c.data.external.map(x => <li style="grid-template-columns:1fr"><a href={x.href} target="_blank" rel="noopener">{x.label}</a></li>)}</ul>
+      </div>}
+    </aside>
+  </div>
+</Base>

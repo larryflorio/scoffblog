@@ -1,0 +1,77 @@
+---
+import '../styles/global.css';
+interface Props { title?: string; description?: string; current?: string }
+const { title, description = 'Independent news and analysis on the Supreme Court of Fantasy Football.', current } = Astro.props;
+const fullTitle = title ? `${title} | SCOFFblog` : 'SCOFFblog: Independent news and analysis on the Supreme Court of Fantasy Football';
+const nav = [
+  ['/news', 'News'], ['/cases', 'Cases'], ['/emergency-docket', 'Emergency Docket'], ['/calendar', 'Calendar'], ['/justices', 'Justices'], ['/about', 'About'],
+];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <div class="utility">
+      <div class="wrap">
+        <nav>
+          <a href="/cases">Cases</a>
+          <a href="/statistics">Statistics</a>
+          <a href="/calendar">Calendar</a>
+          <a href="/justices">Justices</a>
+        </nav>
+        <span class="login">Week 1 Term 2026</span>
+      </div>
+    </div>
+    <header class="masthead">
+      <div class="wrap">
+        <a class="wordmark" href="/">SCOFF<span>blog</span></a>
+        <div class="tag">Independent news and analysis on the Supreme Court of Fantasy Football</div>
+      </div>
+    </header>
+    <div class="primary-nav">
+      <div class="wrap">
+        {nav.map(([href, label]) => <a href={href} aria-current={current === href ? 'page' : undefined}>{label}</a>)}
+      </div>
+    </div>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <div class="wrap">
+        <div>
+          <div class="wordmark">SCOFFblog</div>
+          <p>The premier source for Supreme Court of Fantasy Football news, analysis, and data since Tuesday. Independent and non-partisan, except as to the Commissioner.</p>
+        </div>
+        <div>
+          <h5>Coverage</h5>
+          <ul>
+            <li><a href="/news">Latest News</a></li>
+            <li><a href="/emergency-docket">Emergency Docket</a></li>
+            <li><a href="/cases">Merits Cases</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>The Court</h5>
+          <ul>
+            <li><a href="/justices">Justices</a></li>
+            <li><a href="/calendar">Calendar</a></li>
+            <li><a href="/about">About</a></li>
+          </ul>
+        </div>
+        <div class="disclaimer">
+          SCOFFblog is a work of satire about a fantasy football league. It is not affiliated with, endorsed by, or in any way connected to SCOTUSblog, the Supreme Court of the United States, or any actual court. No opinion published here is legal advice, a legal opinion, or binding on anyone, including the Commissioner, who has said as much. &copy; 2026 SCOFFblog.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

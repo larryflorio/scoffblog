@@ -1,0 +1,19 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { fmtShort, byDate } from '../lib';
+const posts = (await getCollection('posts')).sort(byDate);
+---
+<Base title="News" current="/news">
+  <div class="wrap" style="max-width:820px;padding-top:32px;padding-bottom:60px">
+    <div class="section-head"><h2>Latest</h2></div>
+    {posts.map(p => (
+      <div class="card">
+        <div class="kicker">{p.data.kicker}</div>
+        <h3><a href={`/news/${p.id}`}>{p.data.title}</a></h3>
+        {p.data.dek && <p class="dek">{p.data.dek}</p>}
+        <div class="byline">By <b>{p.data.author}</b> / {fmtShort(p.data.date)}</div>
+      </div>
+    ))}
+  </div>
+</Base>

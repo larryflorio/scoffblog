@@ -1,0 +1,76 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { fmt, fmtShort, byDate } from '../lib';
+const posts = (await getCollection('posts')).sort(byDate);
+const lead = posts.find(p => p.data.featured) ?? posts[0];
+const rest = posts.filter(p => p.id !== lead.id);
+const cases = await getCollection('cases');
+const granted = cases.filter(c => ['Granted', 'Argued', 'Decided'].includes(c.data.status)).length;
+const argued = cases.filter(c => ['Argued', 'Decided'].includes(c.data.status)).length;
+const decided = cases.filter(c => c.data.status === 'Decided').length;
+const emergency = cases.filter(c => c.data.status === 'Emergency application').length;
+const events = [
+  { d: 'Wed, Sep 2', t: 'Orders', e: 'Certiorari before judgment granted, No. 26-1' },
+  { d: 'Fri, Sep 4', t: 'Briefing', e: 'Briefs on the merits due, 5 p.m. ET, or whenever' },
+  { d: 'Sun, Sep 6', t: 'Oral Argument', e: 'Appellant v. God Emperor Commissioner (group chat)' },
+  { d: 'Mon, Sep 7', t: 'Opinion', e: 'Opinion announcement, No. 26-1' },
+  { d: 'Tue, Sep 8', t: 'Draft', e: 'League Draft, time subject to the judgment of this Court' },
+];
+---
+<Base current="/">
+  <div class="wrap home">
+    <section>
+      <div class="lead">
+        <div class="kicker">{lead.data.kicker}</div>
+        <h3><a href={`/news/${lead.id}`}>{lead.data.title}</a></h3>
+        {lead.data.dek && <p class="dek">{lead.data.dek}</p>}
+        <div class="byline">By <b>{lead.data.author}</b> / {fmt(lead.data.date)}</div>
+      </div>
+      <div class="cards-2" style="margin-top:18px">
+        {rest.map(p => (
+          <div class="card">
+            <div class="kicker">{p.data.kicker}</div>
+            <h3><a href={`/news/${p.id}`}>{p.data.title}</a></h3>
+            {p.data.dek && <p class="dek">{p.data.dek}</p>}
+            <div class="byline">By <b>{p.data.author}</b> / {fmtShort(p.data.date)}</div>
+          </div>
+        ))}
+      </div>
+      <div class="section-head" style="margin-top:36px"><h2>Merits Cases</h2><a href="/cases">Full docket</a></div>
+      <table class="docket-table">
+        <thead><tr><th>Docket</th><th>Case</th><th>Status</th></tr></thead>
+        <tbody>
+          {cases.map(c => (
+            <tr>
+              <td class="n">{c.data.docket}</td>
+              <td><a href={`/cases/${c.id}`}>{c.data.title}</a><br /><span class="byline">{c.data.issues[0]}</span></td>
+              <td class="n">{c.data.status}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+    <aside>
+      <div class="box">
+        <h4>Week 1 Term 2026</h4>
+        <div class="stats">
+          <div class="stat"><b>{granted}</b><span>Cases granted</span></div>
+          <div class="stat"><b>{argued}</b><span>Arguments held</span></div>
+          <div class="stat"><b>{decided}</b><span>Decisions issued</span></div>
+          <div class="stat"><b>{emergency}</b><span>Emergency applications</span></div>
+        </div>
+      </div>
+      <div class="box">
+        <h4>Upcoming</h4>
+        <ul class="events">
+          {events.map(ev => <li><span class="d">{ev.d}</span><span><span class="t">{ev.t}</span>{ev.e}</span></li>)}
+        </ul>
+      </div>
+      <div class="box">
+        <h4>Standard of review</h4>
+        <p style="font-size:15px;margin:0">The Commissioner's rulings are reviewed under the "sole and gloriously arbitrary discretion" standard, which this Court has not yet had occasion to construe. It will.</p>
+      </div>
+    </aside>
+  </div>
+</Base>

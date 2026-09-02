@@ -1,0 +1,22 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection, getEntry, render } from 'astro:content';
+import { fmt } from '../../lib';
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map(p => ({ params: { id: p.id }, props: { post: p } }));
+}
+const { post } = Astro.props;
+const { Content } = await render(post);
+const rel = post.data.case ? await getEntry('cases', post.data.case) : null;
+---
+<Base title={post.data.title} description={post.data.dek} current="/news">
+  <article class="article">
+    <div class="kicker">{post.data.kicker}</div>
+    <h1>{post.data.title}</h1>
+    {post.data.dek && <p class="dek">{post.data.dek}</p>}
+    <div class="byline">By <b>{post.data.author}</b> / {fmt(post.data.date)}</div>
+    <div class="prose"><Content /></div>
+    {rel && <div class="related">Case page: <a href={`/cases/${rel.id}`}>{rel.data.title}</a>, No. {rel.data.docket}</div>}
+  </article>
+</Base>
