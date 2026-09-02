@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import { getCollection, render } from 'astro:content';
 import { fmtShort, byDate } from '../../lib';
+import { arrow, chev, ext } from '../../components';
 export async function getStaticPaths() {
   const cases = await getCollection('cases');
   return cases.map(c => ({ params: { id: c.id }, props: { c } }));
@@ -9,37 +10,43 @@ export async function getStaticPaths() {
 const { c } = Astro.props;
 const { Content } = await render(c);
 const posts = (await getCollection('posts')).filter(p => p.data.case === c.id).sort(byDate);
+const chip: Record<string, string> = { 'Granted': 'Cert. Granted', 'Petition pending': 'Petition Pending', 'Argued': 'Argued', 'Decided': 'Decided', 'Emergency application': 'Emergency Application' };
+const cls = (e: string) => /brief|amic/i.test(e) ? 'brief' : /commissioner (declines|referred|responds)/i.test(e) ? 'gov' : 'order';
 ---
 <Base title={c.data.title} description={c.data.issues[0]} current="/cases">
-  <div class="wrap case">
+  <div class="wrap two case">
     <section>
-      <div class="kicker">{c.data.term}</div>
-      <h1>{c.data.title}<span class="status">{c.data.status}</span></h1>
-      <div class="docket-line">Docket No. {c.data.docket}{c.data.lowerDocket && <> &middot; Below: {c.data.lowerDocket}</>}{c.data.granted && <> &middot; Granted {fmtShort(c.data.granted)}</>}{c.data.argued && <> &middot; Argued {fmtShort(c.data.argued)}</>}{c.data.decided && <> &middot; Decided {fmtShort(c.data.decided)}</>}</div>
-      <div class="issues">
-        <h2>Issues</h2>
-        <ol>{c.data.issues.map(i => <li>{i}</li>)}</ol>
-        {c.data.holding && <p style="margin:12px 0 0"><b>Holding:</b> {c.data.holding}</p>}
+      <div class="case-head">
+        <span class="status-chip">{chip[c.data.status]}</span>
+        <h1>{c.data.title}</h1>
       </div>
-      <div class="prose"><Content /></div>
-      {c.data.exhibits.length > 0 && <>
-        <div class="section-head" style="margin-top:30px"><h2>Filings</h2></div>
-        {c.data.exhibits.map(e => <figure class="exhibit" style="margin:0 0 24px"><a href={e.src} target="_blank" rel="noopener"><img src={e.src} alt={e.label} loading="lazy" /></a><figcaption>{e.label}</figcaption></figure>)}
-      </>}
+      <div class="meta">
+        <div><label>Docket No.</label><a href="#">{c.data.docket}</a></div>
+        <div><label>Op. Below</label><a href="#">{c.data.lowerDocket ?? 'Commissioner'}</a></div>
+        <div><label>Argument</label>{c.data.argued ? fmtShort(c.data.argued) : 'Sep 6, 2026'}</div>
+        <div><label>Term</label><a href="/cases">{c.data.term}</a></div>
+        {c.data.decided && <div><label>Decided</label>{fmtShort(c.data.decided)}</div>}
+      </div>
+      <a class="btn" href={c.data.external[0]?.href ?? '#'} target="_blank" rel="noopener">Original filing <Fragment set:html={arrow} /></a>
+      <h2>Issue</h2>
+      <div class="issue">{c.data.issues.map((i, n) => <span>({n + 1}) {i.replace(/^Whether/, 'whether')} </span>)}</div>
+      {c.data.holding && <><h2>Holding</h2><div class="issue">{c.data.holding}</div></>}
+      <div class="tl-head"><h2 style="border:0;padding:0">Proceedings &amp; orders timeline</h2><span class="sel">Oldest first <Fragment set:html={chev} /></span></div>
+      <div class="tl-key">Color key: <span style="--c:#fffedb"></span>Brief or filing <span style="--c:#dedede"></span>Commissioner <span style="--c:#fff"></span>Order</div>
+      <ul class="tl">
+        {c.data.timeline.map(t => <li class={cls(t.entry)}><span class="d">{t.date}</span><span class="e" set:html={t.entry} />{/filed|published/i.test(t.entry) && <a class="lk" href={c.data.external[0]?.href ?? '#'} target="_blank" rel="noopener" aria-label="Open"><Fragment set:html={ext} /></a>}</li>)}
+      </ul>
+      <div class="prose" style="margin-top:40px"><Content /></div>
+      {c.data.exhibits.length > 0 && <div class="exhibits">
+        <h2>Filings</h2>
+        {c.data.exhibits.map(e => <figure class="exhibit"><a href={e.src} target="_blank" rel="noopener"><img src={e.src} alt={e.label} loading="lazy" /></a><figcaption>{e.label}</figcaption></figure>)}
+      </div>}
     </section>
-    <aside>
-      <div class="box">
-        <h4>Proceedings and orders</h4>
-        <ul class="timeline">{c.data.timeline.map(t => <li><span class="d">{t.date}</span><span set:html={t.entry} /></li>)}</ul>
-      </div>
-      {posts.length > 0 && <div class="box">
-        <h4>Coverage</h4>
-        <ul class="events">{posts.map(p => <li><span class="d">{fmtShort(p.data.date)}</span><span><span class="t">{p.data.kicker}</span><a href={`/news/${p.id}`}>{p.data.title}</a></span></li>)}</ul>
-      </div>}
-      {c.data.external.length > 0 && <div class="box">
-        <h4>Elsewhere</h4>
-        <ul class="events">{c.data.external.map(x => <li style="grid-template-columns:1fr"><a href={x.href} target="_blank" rel="noopener">{x.label}</a></li>)}</ul>
-      </div>}
+    <aside class="side">
+      <div class="crumbs"><a href="/cases">Cases</a><span>/</span><a href="/cases">{c.data.term}</a></div>
+      <div><h4>Share</h4><div class="share"><a href="#" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied';return false;">Copy</a><a href={`https://x.com/intent/post?text=${encodeURIComponent(c.data.title)}&url=${encodeURIComponent(`https://scoffblog.com/cases/${c.id}`)}`} target="_blank" rel="noopener">Twitter</a><a href={`mailto:?subject=${encodeURIComponent(c.data.title)}`}>Email</a></div></div>
+      {posts.length > 0 && <div class="rel"><h4>Related Coverage</h4>{posts.map(p => <div style="margin-bottom:18px"><h3 class="headline"><a href={`/news/${p.id}`}>{p.data.title}</a></h3><div class="byline" style="font-variant:normal"><span class="date" style="font-variant:normal;letter-spacing:0;color:var(--ink-3)">{fmtShort(p.data.date)} &middot; {p.data.author}</span></div></div>)}</div>}
+      {c.data.external.length > 0 && <div><h4>Elsewhere</h4><div class="rows">{c.data.external.map(x => <a href={x.href} target="_blank" rel="noopener">{x.label}</a>)}</div></div>}
     </aside>
   </div>
 </Base>

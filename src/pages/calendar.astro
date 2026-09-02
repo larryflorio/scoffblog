@@ -1,19 +1,21 @@
 ---
 import Base from '../layouts/Base.astro';
+import { building } from '../components';
 const events = [
-  ['Wed, Sep 2', 'Orders', 'Certiorari before judgment granted in No. 26-1. Expedited schedule ordered.'],
-  ['Fri, Sep 4', 'Briefing', 'Briefs on the merits due. Amicus briefs from league members who "just want to say something" due same day.'],
-  ['Sun, Sep 6', 'Oral Argument', 'No. 26-1, Appellant v. God Emperor Commissioner. Argument conducted in the group chat. Time allotted: until someone leaves.'],
-  ['Mon, Sep 7', 'Opinion', 'Opinion announcement in No. 26-1.'],
-  ['Tue, Sep 8', 'Draft', 'League Draft. Time as ordered by this Court, or as the Commissioner pleases, whichever the parties comply with.'],
-  ['Thu, Sep 10', 'Conference', 'First regular conference of the Term. Waiver claims, trade challenges, and lineup-lock petitions considered.'],
+  ['mustard', 'Wed, Sep 2', 'Orders', 'Certiorari before judgment granted in No. 26-1. Expedited schedule ordered.'],
+  ['mustard', 'Fri, Sep 4', 'Briefing', 'Briefs on the merits due. Amicus briefs from league members who "just want to say something" due same day.'],
+  ['oral', 'Sun, Sep 6', 'Oral Argument', 'No. 26-1, Appellant v. God Emperor Commissioner. Argument conducted in the group chat. Time allotted: until someone leaves.'],
+  ['ember', 'Mon, Sep 7', 'Opinion', 'Opinion announcement in No. 26-1.'],
+  ['navy', 'Tue, Sep 8', 'League Draft', 'Time as ordered by this Court, or as the Commissioner pleases, whichever the parties comply with.'],
+  ['verdant', 'Thu, Sep 10', 'Conference', 'First regular conference of the Term. Waiver claims, trade challenges, and lineup-lock petitions considered.'],
 ];
 ---
 <Base title="Calendar" current="/calendar">
-  <div class="wrap" style="max-width:820px;padding-top:32px;padding-bottom:60px">
-    <div class="section-head"><h2>Calendar</h2></div>
-    <ul class="events" style="font-size:16px">
-      {events.map(([d, t, e]) => <li style="grid-template-columns:110px 1fr"><span class="d">{d}</span><span><span class="t">{t}</span>{e}</span></li>)}
-    </ul>
+  <div class="hero-band"><h1>Calendar</h1><p>Arguments, conferences, opinions, orders, and the draft.</p></div>
+  <div class="wrap" style="padding-top:44px;padding-bottom:70px">
+    <div class="legend"><span style="--c:var(--oral)">Oral Argument</span><span style="--c:var(--verdant)">Conference</span><span style="--c:var(--ember)">Opinion</span><span style="--c:var(--mustard)">Orders</span><span style="--c:var(--navy)">Draft</span></div>
+    <div class="next"><div class="cards" style="grid-template-columns:1fr 1fr 1fr">
+      {events.map(([c, d, w, k]) => <div class="ev" style={`--c:var(--${c})`}><div class="when">{d}</div><div class="what">{w}</div><div class="case" style="font-style:normal;color:var(--ink-2)">{k}</div><Fragment set:html={building} /></div>)}
+    </div></div>
   </div>
 </Base>

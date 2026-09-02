@@ -5,15 +5,8 @@ import { fmtShort, byDate } from '../lib';
 const posts = (await getCollection('posts')).sort(byDate);
 ---
 <Base title="News" current="/news">
-  <div class="wrap" style="max-width:820px;padding-top:32px;padding-bottom:60px">
-    <div class="section-head"><h2>Latest</h2></div>
-    {posts.map(p => (
-      <div class="card">
-        <div class="kicker">{p.data.kicker}</div>
-        <h3><a href={`/news/${p.id}`}>{p.data.title}</a></h3>
-        {p.data.dek && <p class="dek">{p.data.dek}</p>}
-        <div class="byline">By <b>{p.data.author}</b> / {fmtShort(p.data.date)}</div>
-      </div>
-    ))}
+  <div class="wrap plain-list">
+    <h1>Latest</h1>
+    {posts.map(p => <div class="item"><span class="kicker">{p.data.kicker}</span><h3 class="headline"><a href={`/news/${p.id}`}>{p.data.title}</a></h3>{p.data.dek && <p style="color:var(--ink-2);margin:8px 0 0;font-size:15px">{p.data.dek}</p>}<div class="byline"><i>By</i> <span class="name">{p.data.author}</span><span class="sep">/</span><span class="date">{fmtShort(p.data.date)}</span></div></div>)}
   </div>
 </Base>

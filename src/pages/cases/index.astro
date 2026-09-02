@@ -1,23 +1,27 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
+import { right, chev } from '../../components';
 const cases = await getCollection('cases');
 ---
 <Base title="Cases" current="/cases">
-  <div class="wrap" style="max-width:920px;padding-top:32px;padding-bottom:60px">
-    <div class="section-head"><h2>Week 1 Term 2026 Docket</h2></div>
-    <table class="docket-table">
-      <thead><tr><th>Docket</th><th>Case</th><th>Question presented</th><th>Status</th></tr></thead>
-      <tbody>
-        {cases.map(c => (
-          <tr>
-            <td class="n">{c.data.docket}</td>
-            <td><a href={`/cases/${c.id}`}><b>{c.data.title}</b></a></td>
-            <td>{c.data.issues[0]}</td>
-            <td class="n">{c.data.status}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+  <div class="hero-band"><h1>Cases</h1><p>Browse Supreme Court of Fantasy Football cases by term, petitions, and the interim docket.</p></div>
+  <div class="wrap">
+    <div class="tiles">
+      <div class="tile"><h3>Oral Arguments Docket</h3><p>Cases granted, argued, and decided this term.</p><a class="browse" href="#docket">Browse <Fragment set:html={right} /></a></div>
+      <div class="tile"><h3>Petitions</h3><p>Track relisted trade challenges, upcoming conferences, and invitations to the Commissioner to explain himself.</p><a class="browse" href="/news">Browse <Fragment set:html={right} /></a></div>
+      <div class="tile"><h3>Interim Docket</h3><p>Emergency applications, motions to compel, and anything filed from an Uber.</p><a class="browse" href="/emergency-docket">Browse <Fragment set:html={right} /></a></div>
+      <div class="tile"><h3>Capital Cases</h3><p>Disputes in which a league member has threatened to quit.</p><a class="browse" href="/news">Browse <Fragment set:html={right} /></a></div>
+    </div>
+    <div class="list-head" id="docket">Oral Arguments Docket by Term</div>
+    <div class="acc" style="margin-bottom:70px">
+      <div class="hd"><span>Week 1 Term 2026</span><Fragment set:html={chev} /></div>
+      <table class="docket">
+        <thead><tr><th>Docket</th><th>Case</th><th>Question presented</th><th>Status</th></tr></thead>
+        <tbody>
+          {cases.map(c => <tr><td class="n">{c.data.docket}</td><td><a href={`/cases/${c.id}`}>{c.data.title}</a></td><td>{c.data.issues[0]}</td><td class="n">{c.data.status}</td></tr>)}
+        </tbody>
+      </table>
+    </div>
   </div>
 </Base>

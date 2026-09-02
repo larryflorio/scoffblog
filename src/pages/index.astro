@@ -2,75 +2,161 @@
 import Base from '../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 import { fmt, fmtShort, byDate } from '../lib';
+import { seal, right, left, arrow, building, chev } from '../components';
 const posts = (await getCollection('posts')).sort(byDate);
-const lead = posts.find(p => p.data.featured) ?? posts[0];
-const rest = posts.filter(p => p.id !== lead.id);
 const cases = await getCollection('cases');
+const lead = posts.find(p => p.data.featured) ?? posts[0];
+const others = posts.filter(p => p.id !== lead.id);
+const leftCol = others.slice(0, 2);
+const rightCol = others.slice(2);
 const granted = cases.filter(c => ['Granted', 'Argued', 'Decided'].includes(c.data.status)).length;
 const argued = cases.filter(c => ['Argued', 'Decided'].includes(c.data.status)).length;
 const decided = cases.filter(c => c.data.status === 'Decided').length;
-const emergency = cases.filter(c => c.data.status === 'Emergency application').length;
-const events = [
-  { d: 'Wed, Sep 2', t: 'Orders', e: 'Certiorari before judgment granted, No. 26-1' },
-  { d: 'Fri, Sep 4', t: 'Briefing', e: 'Briefs on the merits due, 5 p.m. ET, or whenever' },
-  { d: 'Sun, Sep 6', t: 'Oral Argument', e: 'Appellant v. God Emperor Commissioner (group chat)' },
-  { d: 'Mon, Sep 7', t: 'Opinion', e: 'Opinion announcement, No. 26-1' },
-  { d: 'Tue, Sep 8', t: 'Draft', e: 'League Draft, time subject to the judgment of this Court' },
+const pending = granted - decided;
+const Byline = (p: any) => `<div class="byline"><i>By</i> <span class="name">${p.data.author}</span><span class="sep">/</span><span class="date">${fmt(p.data.date)}</span></div>`;
+const thumbs = ['/exhibits/26-FF-0831-notice-of-appeal.jpg', '/exhibits/26-FF-0831-motion-to-compel.jpg'];
+// September 2026: the 1st is a Tuesday.
+const marks: Record<number, string[]> = { 2: ['mustard'], 4: ['mustard'], 6: ['oral'], 7: ['ember'], 8: ['navy'], 10: ['verdant'] };
+const weeks: (number | null)[][] = []; let day = 1; let row: (number | null)[] = [null, null];
+while (day <= 30) { row.push(day++); if (row.length === 7) { weeks.push(row); row = []; } }
+while (row.length && row.length < 7) row.push(null); if (row.length) weeks.push(row);
+const next = [
+  { c: 'mustard', d: 'Fri, Sep 4', t: '', w: 'Briefs due', k: 'Merits briefs and amicus filings, No. 26-1' },
+  { c: 'oral', d: 'Sun, Sep 6', t: '8pm ET', w: 'Arguments', k: 'Appellant v. God Emperor Commissioner' },
+  { c: 'ember', d: 'Mon, Sep 7', t: '', w: 'Opinion announcement', k: 'No. 26-1' },
+  { c: 'navy', d: 'Tue, Sep 8', t: 'TBD', w: 'League Draft', k: 'Time subject to the judgment of this Court' },
+];
+const authors = [
+  { role: 'Managing Editor', p: posts[0] },
+  { role: 'Appellant, Pro Se', p: posts.find(p => p.data.kicker === 'EMERGENCY DOCKET') ?? posts[1] },
+  { role: 'Respondent', p: posts.find(p => p.data.kicker === 'SCOFF FOCUS') ?? posts[2] },
+  { role: 'Office of the Clerk', p: posts[posts.length - 1] },
 ];
 ---
 <Base current="/">
-  <div class="wrap home">
-    <section>
-      <div class="lead">
-        <div class="kicker">{lead.data.kicker}</div>
-        <h3><a href={`/news/${lead.id}`}>{lead.data.title}</a></h3>
-        {lead.data.dek && <p class="dek">{lead.data.dek}</p>}
-        <div class="byline">By <b>{lead.data.author}</b> / {fmt(lead.data.date)}</div>
+  <div class="wrap front">
+    <div class="col left">
+      {leftCol.map((p, i) => (
+        <div>
+          <a href={`/news/${p.id}`} class="thumb"><img src={thumbs[i % 2]} alt="" loading="lazy" /></a>
+          <span class="kicker">{p.data.kicker}</span>
+          <h3 class="headline"><a href={`/news/${p.id}`}>{p.data.title}</a></h3>
+          <Fragment set:html={Byline(p)} />
+        </div>
+      ))}
+    </div>
+    <div class="col center">
+      <div>
+        <a href={`/news/${lead.id}`} class="thumb tall seal"><Fragment set:html={seal} /></a>
+        <span class="kicker">{lead.data.kicker}</span>
+        <h3 class="headline"><a href={`/news/${lead.id}`}>{lead.data.title}</a></h3>
+        <Fragment set:html={Byline(lead)} />
       </div>
-      <div class="cards-2" style="margin-top:18px">
-        {rest.map(p => (
-          <div class="card">
-            <div class="kicker">{p.data.kicker}</div>
-            <h3><a href={`/news/${p.id}`}>{p.data.title}</a></h3>
-            {p.data.dek && <p class="dek">{p.data.dek}</p>}
-            <div class="byline">By <b>{p.data.author}</b> / {fmtShort(p.data.date)}</div>
-          </div>
-        ))}
+    </div>
+    <div class="col right">
+      {rightCol.map(p => (
+        <div>
+          <span class="kicker">{p.data.kicker}</span>
+          <h3 class="headline"><a href={`/news/${p.id}`}>{p.data.title}</a></h3>
+          <Fragment set:html={Byline(p)} />
+        </div>
+      ))}
+      {cases.map(c => (
+        <div>
+          <span class="kicker">Merits Case</span>
+          <h3 class="headline"><a href={`/cases/${c.id}`}>{c.data.title}</a></h3>
+          <div class="byline"><span class="date">No. {c.data.docket}</span><span class="sep">/</span><span class="date">{c.data.status}</span></div>
+        </div>
+      ))}
+      <div>
+        <span class="kicker">SCOFFblog Summit</span>
+        <h3 class="headline"><a href="/calendar">Back-to-School Night</a></h3>
+        <div class="byline"><span class="date">Tuesday, September 8, 2026</span></div>
       </div>
-      <div class="section-head" style="margin-top:36px"><h2>Merits Cases</h2><a href="/cases">Full docket</a></div>
-      <table class="docket-table">
-        <thead><tr><th>Docket</th><th>Case</th><th>Status</th></tr></thead>
-        <tbody>
-          {cases.map(c => (
-            <tr>
-              <td class="n">{c.data.docket}</td>
-              <td><a href={`/cases/${c.id}`}>{c.data.title}</a><br /><span class="byline">{c.data.issues[0]}</span></td>
-              <td class="n">{c.data.status}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </section>
-    <aside>
-      <div class="box">
-        <h4>Week 1 Term 2026</h4>
-        <div class="stats">
-          <div class="stat"><b>{granted}</b><span>Cases granted</span></div>
-          <div class="stat"><b>{argued}</b><span>Arguments held</span></div>
-          <div class="stat"><b>{decided}</b><span>Decisions issued</span></div>
-          <div class="stat"><b>{emergency}</b><span>Emergency applications</span></div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="summit">
+      <div class="img"><img src="/exhibits/26-FF-0831-notice-of-appeal.jpg" alt="" loading="lazy" /></div>
+      <div class="txt">
+        <h3>Plenary Power and its Limits</h3>
+        <p>A conversation between the Appellant, Pro Se, and the Office of the Clerk [trash bin], moderated by nobody, because the Commissioner is not reading this essay.</p>
+        <a class="btn ruby" href="/cases/26-1-appellant-v-commissioner">Read the full filing <Fragment set:html={arrow} /></a>
+      </div>
+    </div>
+
+    <div class="sec-head"><h2>Upcoming</h2><a class="btn" href="/calendar">Full Calendar <Fragment set:html={right} /></a></div>
+    <div class="legend">
+      <span style="--c:var(--oral)">Oral Argument</span><span style="--c:var(--verdant)">Conference</span><span style="--c:var(--ember)">Opinion</span><span style="--c:var(--mustard)">Orders</span><span style="--c:var(--navy)">Draft</span><span style="--c:var(--holiday)">Holiday</span>
+    </div>
+    <div class="upcoming">
+      <div class="cal">
+        <div class="bar"><Fragment set:html={left} /><span>September <Fragment set:html={chev} /> &nbsp; 2026 <Fragment set:html={chev} /></span><Fragment set:html={right} /></div>
+        <table>
+          <thead><tr><th>S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th></tr></thead>
+          <tbody>
+            {weeks.map(w => <tr>{w.map(d => <td class={d === 2 ? 'today' : ''}>{d && <span class="n">{d}</span>}{d && (marks[d] ?? []).map(m => <span class="dot" style={`--c:var(--${m})`}></span>)}</td>)}</tr>)}
+          </tbody>
+        </table>
+      </div>
+      <div class="next">
+        <h4>Next Events</h4>
+        <div class="cards">
+          {next.map(e => <div class="ev" style={`--c:var(--${e.c})`}><div class="when">{e.d}{e.t && <span class="t">{e.t}</span>}</div><div class="what">{e.w}</div><div class="case">{e.k}</div><Fragment set:html={building} /></div>)}
         </div>
       </div>
-      <div class="box">
-        <h4>Upcoming</h4>
-        <ul class="events">
-          {events.map(ev => <li><span class="d">{ev.d}</span><span><span class="t">{ev.t}</span>{ev.e}</span></li>)}
-        </ul>
+    </div>
+  </div>
+
+  <div class="wrap latest">
+    <h2>Latest</h2>
+    <a class="hero" href={`/news/${lead.id}`}>
+      <div class="bg"><Fragment set:html={seal} /></div>
+      <div class="inner">
+        <span class="kicker">{lead.data.kicker}</span>
+        <h3>{lead.data.title}</h3>
+        <Fragment set:html={Byline(lead)} />
       </div>
-      <div class="box">
-        <h4>Standard of review</h4>
-        <p style="font-size:15px;margin:0">The Commissioner's rulings are reviewed under the "sole and gloriously arbitrary discretion" standard, which this Court has not yet had occasion to construe. It will.</p>
+    </a>
+  </div>
+  <div class="band">
+    <div class="wrap">
+      <div class="grid3">
+        {others.map(p => <div><span class="kicker">{p.data.kicker}</span><h3 class="headline"><a href={`/news/${p.id}`}>{p.data.title}</a></h3><div class="byline"><i>By</i> <span class="name">{p.data.author}</span><span class="sep">/</span><span class="date">{fmtShort(p.data.date)}</span></div></div>)}
       </div>
-    </aside>
+    </div>
+  </div>
+
+  <div class="term">
+    <div class="wrap">
+      <h2>Week 1 Term 2026</h2>
+      <div class="tabs"><span class="on">Oral Argument</span><span>Interim Docket</span></div>
+      <div class="stats">
+        <div class="stat"><b>{granted}</b><span>Cases Granted</span></div>
+        <div class="stat"><b>{argued}</b><span>Arguments Held</span></div>
+        <div class="stat"><b>{decided}</b><span>Decisions Issued</span></div>
+        <div class="stat"><b>{pending}</b><span>Pending Decisions</span></div>
+      </div>
+      <a class="btn solid" href="/cases">View Oral Argument Docket</a>
+    </div>
+  </div>
+
+  <div class="band more">
+    <div class="wrap">
+      <h2>More News &amp; Commentary</h2>
+      <div class="filters"><span class="on">All</span><span>Court News</span><span>Commentary</span><span>Emergency Docket</span></div>
+      <div class="grid3">
+        {posts.map(p => <div><span class="kicker">{p.data.kicker}</span><h3 class="headline"><a href={`/news/${p.id}`}>{p.data.title}</a></h3><div class="byline"><i>By</i> <span class="name">{p.data.author}</span><span class="sep">/</span><span class="date">{fmtShort(p.data.date)}</span></div></div>)}
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap authors">
+    <div class="sec-head"><h2>Latest from our authors</h2><span><a class="btn" style="height:36px;padding:0 12px"><Fragment set:html={left} /></a> <a class="btn" style="height:36px;padding:0 12px"><Fragment set:html={right} /></a></span></div>
+    <div class="row">
+      {authors.map(a => <div class="acard"><div class="top">{a.role}</div><div class="body"><span class="kicker">{a.p.data.kicker}</span><h3 class="headline"><a href={`/news/${a.p.id}`}>{a.p.data.title}</a></h3><Fragment set:html={Byline(a.p)} /></div></div>)}
+    </div>
+    <div class="meet"><a class="btn solid" href="/justices">Meet the Team <Fragment set:html={right} /></a></div>
   </div>
 </Base>

@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { getCollection, getEntry, render } from 'astro:content';
-import { fmt } from '../../lib';
+import { fmtShort, byDate } from '../../lib';
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
   return posts.map(p => ({ params: { id: p.id }, props: { post: p } }));
@@ -9,14 +9,25 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await render(post);
 const rel = post.data.case ? await getEntry('cases', post.data.case) : null;
+const related = (await getCollection('posts')).filter(p => p.id !== post.id).sort(byDate).slice(0, 3);
 ---
 <Base title={post.data.title} description={post.data.dek} current="/news">
-  <article class="article">
-    <div class="kicker">{post.data.kicker}</div>
-    <h1>{post.data.title}</h1>
-    {post.data.dek && <p class="dek">{post.data.dek}</p>}
-    <div class="byline">By <b>{post.data.author}</b> / {fmt(post.data.date)}</div>
-    <div class="prose"><Content /></div>
-    {rel && <div class="related">Case page: <a href={`/cases/${rel.id}`}>{rel.data.title}</a>, No. {rel.data.docket}</div>}
-  </article>
+  <div class="wrap two">
+    <article>
+      <div class="article-head">
+        <span class="kicker plain">{post.data.kicker}</span>
+        <h1>{post.data.title}</h1>
+        <div class="byline"><span class="avatar"></span><span><i>By</i> <span class="name">{post.data.author}</span><span class="sep">/</span><span class="date">{fmtShort(post.data.date)}</span></span></div>
+      </div>
+      {post.data.dek && <p class="lede">{post.data.dek}</p>}
+      <div class="prose"><Content /></div>
+    </article>
+    <aside class="side">
+      <div class="cat">{post.data.kicker.replace(/\b\w+/g, w => w[0] + w.slice(1).toLowerCase())}</div>
+      <div><h4>Share</h4><div class="share"><a href="#" onclick="navigator.clipboard.writeText(location.href);this.textContent='Copied';return false;">Copy</a><a href={`https://x.com/intent/post?text=${encodeURIComponent(post.data.title)}&url=${encodeURIComponent(`https://scoffblog.com/news/${post.id}`)}`} target="_blank" rel="noopener">Twitter</a><a href={`mailto:?subject=${encodeURIComponent(post.data.title)}&body=${encodeURIComponent(`https://scoffblog.com/news/${post.id}`)}`}>Email</a></div></div>
+      {rel && <div><h4>Cases Mentioned</h4><div class="rows"><a href={`/cases/${rel.id}`}>{rel.data.title}<span class="n">{rel.data.docket}</span></a></div></div>}
+      {related.length > 0 && <div class="rel"><h4>Related Articles</h4>{related.map(r => <div style="margin-bottom:18px"><h3 class="headline"><a href={`/news/${r.id}`}>{r.data.title}</a></h3><div class="byline"><i>By</i> <span class="name">{r.data.author}</span><span class="sep">/</span><span class="date">{fmtShort(r.data.date)}</span></div></div>)}</div>}
+      <div class="promo"><p>Each weekday, we present news articles and commentary related to the Supreme Court of Fantasy Football in a smart, approachable way, until the draft.</p><form onsubmit="event.preventDefault();this.querySelector('button').textContent='Filed';"><input type="email" placeholder="Your email address" aria-label="Email" /><button type="submit">Submit</button></form><small>This site is protected by the Phantom Clerk Doctrine.</small></div>
+    </aside>
+  </div>
 </Base>

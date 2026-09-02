@@ -1,11 +1,9 @@
 ---
 import '../styles/global.css';
+import { chev, search, person } from '../components';
 interface Props { title?: string; description?: string; current?: string }
 const { title, description = 'Independent news and analysis on the Supreme Court of Fantasy Football.', current } = Astro.props;
 const fullTitle = title ? `${title} | SCOFFblog` : 'SCOFFblog: Independent news and analysis on the Supreme Court of Fantasy Football';
-const nav = [
-  ['/news', 'News'], ['/cases', 'Cases'], ['/emergency-docket', 'Emergency Docket'], ['/calendar', 'Calendar'], ['/justices', 'Justices'], ['/about', 'About'],
-];
 ---
 <!doctype html>
 <html lang="en">
@@ -24,54 +22,75 @@ const nav = [
     <div class="utility">
       <div class="wrap">
         <nav>
-          <a href="/cases">Cases</a>
-          <a href="/statistics">Statistics</a>
+          <a href="/cases">Cases<Fragment set:html={chev} /></a>
+          <a href="/statistics">Statistics<Fragment set:html={chev} /></a>
           <a href="/calendar">Calendar</a>
           <a href="/justices">Justices</a>
         </nav>
-        <span class="login">Week 1 Term 2026</span>
+        <div class="tools">
+          <a href="/cases" aria-label="Search"><Fragment set:html={search} /></a>
+          <a href="/about" class="login"><Fragment set:html={person} /> Login</a>
+        </div>
       </div>
     </div>
     <header class="masthead">
       <div class="wrap">
-        <a class="wordmark" href="/">SCOFF<span>blog</span></a>
-        <div class="tag">Independent news and analysis on the Supreme Court of Fantasy Football</div>
+        <nav class="left">
+          <a href="/news">News<Fragment set:html={chev} /></a>
+          <a href="/news">Commentary<Fragment set:html={chev} /></a>
+          <a href="/about">About<Fragment set:html={chev} /></a>
+        </nav>
+        <a class="wordmark" href="/" aria-label="SCOFFblog"><b>SCOFF</b>blog</a>
+        <nav class="right">
+          <a href="/about">Newsletters<Fragment set:html={chev} /></a>
+          <a href="/about">Podcasts<Fragment set:html={chev} /></a>
+          <a class="subscribe" href="/about">Subscribe</a>
+        </nav>
       </div>
     </header>
-    <div class="primary-nav">
+    <div class="secondary">
       <div class="wrap">
-        {nav.map(([href, label]) => <a href={href} aria-current={current === href ? 'page' : undefined}>{label}</a>)}
+        <a href="/cases">Merits Cases</a>
+        <a href="/news">Court News</a>
+        <a href="/news">Explainers</a>
+        <a href="/emergency-docket">Emergency appeals and applications</a>
       </div>
     </div>
     <main>
       <slot />
     </main>
+    <section class="newsletter">
+      <div class="wrap">
+        <div>
+          <h3>Stay informed on every decision.</h3>
+          <p>Receive essential Court news every morning, or whenever the Commissioner does something.</p>
+        </div>
+        <div>
+          <form onsubmit="event.preventDefault(); this.querySelector('button').textContent='Referred to the Clerk';">
+            <input type="email" placeholder="Your email address" aria-label="Email address" />
+            <button type="submit">Subscribe Free</button>
+          </form>
+          <small>This site is protected by nothing. Submissions are referred to the Office of the Clerk [trash bin].</small>
+        </div>
+      </div>
+    </section>
     <footer>
       <div class="wrap">
         <div>
-          <div class="wordmark">SCOFFblog</div>
-          <p>The premier source for Supreme Court of Fantasy Football news, analysis, and data since Tuesday. Independent and non-partisan, except as to the Commissioner.</p>
+          <div class="wordmark"><b>SCOFF</b>blog</div>
+          <p class="blurb">The premier source for Supreme Court of Fantasy Football news, analysis, and data since Tuesday. Independent and non-partisan, except as to the Commissioner.</p>
         </div>
-        <div>
-          <h5>Coverage</h5>
-          <ul>
-            <li><a href="/news">Latest News</a></li>
-            <li><a href="/emergency-docket">Emergency Docket</a></li>
-            <li><a href="/cases">Merits Cases</a></li>
-          </ul>
-        </div>
-        <div>
-          <h5>The Court</h5>
-          <ul>
-            <li><a href="/justices">Justices</a></li>
-            <li><a href="/calendar">Calendar</a></li>
-            <li><a href="/about">About</a></li>
-          </ul>
-        </div>
-        <div class="disclaimer">
-          SCOFFblog is a work of satire about a fantasy football league. It is not affiliated with, endorsed by, or in any way connected to SCOTUSblog, the Supreme Court of the United States, or any actual court. No opinion published here is legal advice, a legal opinion, or binding on anyone, including the Commissioner, who has said as much. &copy; 2026 SCOFFblog.
-        </div>
+        <div><h5>Coverage</h5><ul><li><a href="/news">Latest News</a></li><li><a href="/news">Recurring Columns</a></li><li><a href="/news">Outside Opinions</a></li><li><a href="/emergency-docket">Interim Docket Blog</a></li></ul></div>
+        <div><h5>Cases</h5><ul><li><a href="/cases">Oral Argument Docket</a></li><li><a href="/emergency-docket">Interim Docket</a></li><li><a href="/cases">Petitions</a></li><li><a href="/cases">Capital Cases</a></li><li><a href="/calendar">Calendar</a></li><li><a href="/statistics">Statistics</a></li></ul></div>
+        <div><h5>Podcasts</h5><ul><li><a href="/about">Advisory Opinions</a></li><li><a href="/about">Divided Argument</a></li><li><a href="/about">Waiver Wire Watch</a></li></ul></div>
+        <div><h5>Newsletters</h5><ul><li><a href="/about">SCOFFtoday</a></li><li><a href="/about">SCOFF Opinions</a></li></ul></div>
+        <div><h5>About</h5><ul><li><a href="/about">Manifesto</a></li><li><a href="/justices">Staff</a></li><li><a href="/about">Contact Us</a></li><li><a href="/about">Submissions</a></li><li><a href="/about">FAQs</a></li><li><a href="/about">Merch</a></li></ul></div>
       </div>
+      <div class="bottom">
+        <div class="copy"><span>SC</span> &copy; 2026 SCOFFblog. All rights reserved, none enforced.</div>
+        <div class="legal"><a href="/news">Archive</a><a href="/about">Privacy Policy</a><a href="/about">Editorial Policy</a><a href="/about">Terms of Use</a></div>
+      </div>
+      <div class="disclaimer">SCOFFblog is a work of satire about a fantasy football league. It is not affiliated with, endorsed by, or in any way connected to SCOTUSblog, the Supreme Court of the United States, or any actual court. No opinion published here is legal advice, a legal opinion, or binding on anyone, including the Commissioner, who has said as much.</div>
     </footer>
   </body>
 </html>
