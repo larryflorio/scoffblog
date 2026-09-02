@@ -14,7 +14,7 @@ const argued = cases.filter(c => ['Argued', 'Decided'].includes(c.data.status)).
 const decided = cases.filter(c => c.data.status === 'Decided').length;
 const pending = granted - decided;
 const Byline = (p: any) => `<div class="byline"><i>By</i> <span class="name">${p.data.author}</span><span class="sep">/</span><span class="date">${fmt(p.data.date)}</span></div>`;
-const thumbs = ['/exhibits/26-FF-0831-notice-of-appeal.jpg', '/exhibits/26-FF-0831-motion-to-compel.jpg'];
+const thumbs = ['/exhibits/26-FF-0831-motion-to-compel.png', '/exhibits/26-FF-0831-notice-of-appeal.png'];
 // September 2026: the 1st is a Tuesday.
 const marks: Record<number, string[]> = { 2: ['mustard'], 4: ['mustard'], 6: ['oral'], 7: ['ember'], 8: ['navy'], 10: ['verdant'] };
 const weeks: (number | null)[][] = []; let day = 1; let row: (number | null)[] = [null, null];
@@ -22,14 +22,14 @@ while (day <= 30) { row.push(day++); if (row.length === 7) { weeks.push(row); ro
 while (row.length && row.length < 7) row.push(null); if (row.length) weeks.push(row);
 const next = [
   { c: 'mustard', d: 'Fri, Sep 4', t: '', w: 'Briefs due', k: 'Merits briefs and amicus filings, No. 26-1' },
-  { c: 'oral', d: 'Sun, Sep 6', t: '8pm ET', w: 'Arguments', k: 'Appellant v. God Emperor Commissioner' },
+  { c: 'oral', d: 'Sun, Sep 6', t: '8pm ET', w: 'Arguments', k: 'Goldich v. Dylus' },
   { c: 'ember', d: 'Mon, Sep 7', t: '', w: 'Opinion announcement', k: 'No. 26-1' },
   { c: 'navy', d: 'Tue, Sep 8', t: 'TBD', w: 'League Draft', k: 'Time subject to the judgment of this Court' },
 ];
 const authors = [
   { role: 'Managing Editor', p: posts[0] },
-  { role: 'Appellant, Pro Se', p: posts.find(p => p.data.kicker === 'EMERGENCY DOCKET') ?? posts[1] },
-  { role: 'Respondent', p: posts.find(p => p.data.kicker === 'SCOFF FOCUS') ?? posts[2] },
+  { role: 'Marc Goldich, Appellant, Pro Se', p: posts.find(p => p.data.kicker === 'EMERGENCY DOCKET') ?? posts[1] },
+  { role: 'Erich Dylus, God Emperor Commissioner', p: posts.find(p => p.data.kicker === 'SCOFF FOCUS') ?? posts[2] },
   { role: 'Office of the Clerk', p: posts.find(p => p.data.kicker === 'SCOFF OUTSIDE OPINIONS') ?? posts[posts.length - 1] },
 ];
 ---
@@ -78,11 +78,11 @@ const authors = [
 
   <div class="wrap">
     <div class="summit">
-      <div class="img"><img src="/exhibits/26-FF-0831-notice-of-appeal.jpg" alt="" loading="lazy" /></div>
+      <div class="img"><img src="/exhibits/26-FF-0831-order.png" alt="" loading="lazy" /></div>
       <div class="txt">
         <h3>Plenary Power and its Limits</h3>
-        <p>A conversation between the Appellant, Pro Se, and the Office of the Clerk [trash bin], moderated by nobody, because the Commissioner is not reading this essay.</p>
-        <a class="btn ruby" href="/cases/26-1-appellant-v-commissioner">Read the full filing <Fragment set:html={arrow} /></a>
+        <p>A conversation between Marc Goldich, Pro Se, and the Office of the Clerk [trash bin], moderated by nobody, because Commissioner Dylus is not reading this essay.</p>
+        <a class="btn ruby" href="/cases/26-1-goldich-v-dylus">Read the full filings <Fragment set:html={arrow} /></a>
       </div>
     </div>
 

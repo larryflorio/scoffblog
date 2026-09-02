@@ -4,7 +4,7 @@ kicker: "SCOFF OUTSIDE OPINIONS"
 author: "A Concerned League Member"
 date: 2026-09-02
 dek: "A class of two is still a class. The rules should say so before the next parent has to sue."
-case: "26-1-appellant-v-commissioner"
+case: "26-1-goldich-v-dylus"
 ---
 
 The dispute now before the Court is about a draft time. The problem underneath it is structural. The league constitution vests all authority in one office, provides no mechanism for review, and treats every request for accommodation as a motion addressed to the Commissioner's mood. That arrangement works until two people have the same conflict on the same night, at which point the league discovers it has no procedure, only a person.

@@ -28,7 +28,7 @@ const cases = defineCollection({
     argued: z.coerce.date().optional(),
     decided: z.coerce.date().optional(),
     timeline: z.array(z.object({ date: z.string(), entry: z.string() })),
-    exhibits: z.array(z.object({ label: z.string(), src: z.string() })).default([]),
+    exhibits: z.array(z.object({ label: z.string(), src: z.string(), pdf: z.string().optional() })).default([]),
     external: z.array(z.object({ label: z.string(), href: z.string() })).default([]),
   }),
 });

@@ -13,7 +13,7 @@ Satirical site: the Supreme Court of Fantasy Football (SCOFF), styled after SCOT
 - Register: SCOTUSblog. Dry, procedural, reportorial. The facts are absurd; the prose never winks. No exclamation points, no "lol", no explaining the joke. The syllabus voice is the house voice.
 - Everything is in-universe. The league's disputes are cases. The Commissioner is a lower court whose standard of review is his own discretion. The Fantasy Football Court of Appeals was created by the appellant in the first case. SCOFF sits above it as the League en banc.
 - Reporter citations: `N F.F. page (year)` for the appellate reporter, `N S.C.F.F. page` for SCOFF opinions. Cite real fictional precedent from prior posts; never invent a case you have not published. Keep a running list in `src/content/reporter.md`.
-- Real people: league members appear by name and title only where they have consented (all current members have). No claims about anyone's real job, employer, or family beyond what the filings themselves say. Kids stay unnamed.
+- Real people: league members appear by name and title only where they have consented (all current members have). Marc Goldich (appellant), Erich Dylus (Commissioner), and Drew Hinkes (publisher of the filings) are on the record; "David" stays first-name only until the record says otherwise. No claims about anyone's real job, employer, or family beyond what the filings themselves say. Kids stay unnamed.
 - Never copy SCOTUSblog's code, logo, images, or text. Echo the idiom, not the assets.
 - Disclaimer in the footer stays on every page.
 

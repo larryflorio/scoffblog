@@ -4,12 +4,12 @@ kicker: "SCOFF FOCUS"
 author: "SCOFFblog Staff"
 date: 2026-09-02
 dek: "How a trash bin acquired appellate jurisdiction, and why the Court may take it away."
-case: "26-1-appellant-v-commissioner"
+case: "26-1-goldich-v-dylus"
 ---
 
 When the Commissioner wrote "Not reading this essay. Please direct it to the proper clerk," he did more than decline to read a filing. He asserted a doctrine. Under the Phantom Clerk Doctrine, as the appellant has named it, a tribunal may extinguish an appeal by referring it to an officer who does not exist, and the appeal, having nowhere to go, ceases to be pending.
 
-The doctrine has intuitive appeal to anyone who has run a fantasy league. It has less appeal to anyone who has read *Schrodinger v. Commissioner*, 3 F.F. 1 (2026), which the appellant cites for the rule that a filing is pending whether or not it is opened. The two authorities cannot both be right, and the Court granted review on Wednesday in part to say which one is.
+The doctrine has intuitive appeal to anyone who has run a fantasy league. It has less appeal to anyone who has read *Schrodinger v. Dylus*, 3 F.F. 1 (2026), which the appellant cites for the rule that a filing is pending whether or not it is opened. The two authorities cannot both be right, and the Court granted review on Wednesday in part to say which one is.
 
 ## The case for the Commissioner
 

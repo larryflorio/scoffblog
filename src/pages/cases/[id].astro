@@ -11,7 +11,7 @@ const { c } = Astro.props;
 const { Content } = await render(c);
 const posts = (await getCollection('posts')).filter(p => p.data.case === c.id).sort(byDate);
 const chip: Record<string, string> = { 'Granted': 'Cert. Granted', 'Petition pending': 'Petition Pending', 'Argued': 'Argued', 'Decided': 'Decided', 'Emergency application': 'Emergency Application' };
-const cls = (e: string) => /(notice|motion|brief)[^.]*\bfiled\b/i.test(e) ? 'brief' : /commissioner declines/i.test(e) ? 'gov' : 'order';
+const cls = (e: string) => /(notice|motion|brief)[^.]*\bfiled\b/i.test(e) ? 'brief' : /commissioner declines|order of god emperor/i.test(e) ? 'gov' : 'order';
 ---
 <Base title={c.data.title} description={c.data.issues[0]} current="/cases">
   <div class="wrap two case">
@@ -39,7 +39,7 @@ const cls = (e: string) => /(notice|motion|brief)[^.]*\bfiled\b/i.test(e) ? 'bri
       <div class="prose" style="margin-top:40px"><Content /></div>
       {c.data.exhibits.length > 0 && <div class="exhibits">
         <h2>Filings</h2>
-        {c.data.exhibits.map(e => <figure class="exhibit"><a href={e.src} target="_blank" rel="noopener"><img src={e.src} alt={e.label} loading="lazy" /></a><figcaption>{e.label}</figcaption></figure>)}
+        {c.data.exhibits.map(e => <figure class="exhibit"><a href={e.pdf ?? e.src} target="_blank" rel="noopener"><img src={e.src} alt={e.label} loading="lazy" /></a><figcaption>{e.label}{e.pdf && <> <a href={e.pdf} target="_blank" rel="noopener" style="color:var(--navy);text-decoration:underline">Download</a></>}</figcaption></figure>)}
       </div>}
     </section>
     <aside class="side">

@@ -4,21 +4,21 @@ kicker: "COURT NEWS"
 author: "SCOFFblog Staff"
 date: 2026-09-02
 dek: "The Court will decide before Tuesday whether a Commissioner can end an appeal by not reading it. The Commissioner has not read the grant."
-case: "26-1-appellant-v-commissioner"
+case: "26-1-goldich-v-dylus"
 featured: true
 ---
 
-The Supreme Court of Fantasy Football on Wednesday granted certiorari before judgment in *Appellant v. God Emperor Commissioner*, No. 26-1, agreeing to decide whether the Commissioner's denial of a motion to move the League Draft from its scheduled Tuesday slot to 10:00 p.m. can be reviewed by anyone, and if so, by whom.
+The Supreme Court of Fantasy Football on Wednesday granted certiorari before judgment in *Goldich v. Dylus*, No. 26-1, agreeing to decide whether the Commissioner's denial of a motion to move the League Draft from its scheduled Tuesday slot to 10:00 p.m. can be reviewed by anyone, and if so, by whom.
 
 The order came hours after the appellant's filings in the court below circulated on X, where they had been viewed more than 660,000 times by Wednesday evening. The Court's order did not mention the tweet. The Court's order did not need to.
 
 ## The dispute
 
-The appellant asked the Commissioner to push the draft two hours so that he and one other league member could attend Back-to-School Night at their children's school. The Commissioner denied the request in a memorandum opinion whose complete legal analysis reads: "I don't want to."
+Marc Goldich asked Commissioner Erich Dylus to push the draft two hours so that he and one other league member could attend Back-to-School Night at their children's school. The Commissioner denied the request in a memorandum opinion whose complete legal analysis reads: "I don't want to."
 
-The appellant appealed to the United States Fantasy Football Court of Appeals. That court had not previously existed. The appellant addressed the deficiency by creating it, and asserted jurisdiction under what the notice of appeal calls "the ancient and controlling principle of 'too late.'"
+Goldich appealed to the United States Fantasy Football Court of Appeals. That court had not previously existed. He addressed the deficiency by creating it, and asserted jurisdiction under what the notice of appeal calls "the ancient and controlling principle of 'too late.'"
 
-The Commissioner's response was to decline to read the appeal and refer it to "the proper clerk," identified in the record as a trash bin. The appellant then moved to compel judicial review, objecting to what he termed the Phantom Clerk Doctrine and citing *Schrodinger v. Commissioner*, 3 F.F. 1 (2026), for the proposition that an appeal "remains pending whether or not the Commissioner opens the PDF."
+The Commissioner's response was to decline to read the appeal and refer it to "the proper clerk," identified in the record as a trash bin. The appellant then moved to compel judicial review, objecting to what he termed the Phantom Clerk Doctrine and citing *Schrodinger v. Dylus*, 3 F.F. 1 (2026), for the proposition that an appeal "remains pending whether or not the Commissioner opens the PDF."
 
 ## The questions presented
 
