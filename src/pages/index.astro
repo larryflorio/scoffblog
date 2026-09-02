@@ -30,7 +30,7 @@ const authors = [
   { role: 'Managing Editor', p: posts[0] },
   { role: 'Appellant, Pro Se', p: posts.find(p => p.data.kicker === 'EMERGENCY DOCKET') ?? posts[1] },
   { role: 'Respondent', p: posts.find(p => p.data.kicker === 'SCOFF FOCUS') ?? posts[2] },
-  { role: 'Office of the Clerk', p: posts[posts.length - 1] },
+  { role: 'Office of the Clerk', p: posts.find(p => p.data.kicker === 'SCOFF OUTSIDE OPINIONS') ?? posts[posts.length - 1] },
 ];
 ---
 <Base current="/">
