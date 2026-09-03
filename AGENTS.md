@@ -17,6 +17,12 @@ Satirical site: the Supreme Court of Fantasy Football (SCOFF), styled after SCOT
 - Never copy SCOTUSblog's code, logo, images, or text. Echo the idiom, not the assets.
 - Disclaimer in the footer stays on every page.
 
+## Lead selection
+
+- The newest Court News post is the front-page lead unless Larry says otherwise. When publishing a post with `featured: true`, set the previous lead to `featured: false` in the same commit.
+- Docket timeline entries follow filing order as Larry states it, not the order documents arrived.
+- Filings are primary sources republished verbatim: any redaction (children's names or ages, anything a member asks to keep out) happens in the document before it is copied into `public/filings`, never only in the site's prose.
+
 ## Content types
 
 - `posts`: kicker in {COURT NEWS, OPINION ANALYSIS, EMERGENCY DOCKET, RELIST WATCH, SCOFF FOCUS, STAT PACK, ARGUMENT ANALYSIS, PETITIONS WE'RE WATCHING}. Author is the desk, not a real person, unless a member writes one.
