@@ -5,7 +5,7 @@ author: "SCOFFblog Staff"
 date: 2026-09-02
 dek: "The amicus for the Commissioner is now against him. \"Movant regrets that he was right about the standard and wrong about the man.\""
 case: "26-1-goldich-v-dylus"
-featured: true
+featured: false
 ---
 
 Samir Patel, whose amicus brief argued Wednesday that the Commissioner cannot be moved, has filed a motion to intervene on the ground that the Commissioner moved.

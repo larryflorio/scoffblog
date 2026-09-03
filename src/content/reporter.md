@@ -20,6 +20,8 @@ Fictional precedents cited on the site. Add a line whenever a post cites a new o
 - League Constitution, art. I ("The Commissioner decides."). Cited passim by amicus Patel; never produced.
 - Fed. R. Civ. P. 24(a), intervention of right; Fed. R. Civ. P. 23(e), class settlement notice and approval (Patel motion to intervene).
 - Third Wedding Anniversary (Sept. 4, 2026) (controlling) (Patel motion to intervene).
+- *SEC v. W.J. Howey Co.*, 328 U.S. 293 (1946), "cited in a footnote, where it belongs" (Florio amicus).
+- Commodity Exchange Act, 7 U.S.C. § 1 et seq., "not binding on this League; persuasive on a Tuesday" (Florio amicus).
 - *Marbury v. Madison*, 5 U.S. 137 (1803), "holding that someone gets to decide; cited by both sides for the same reason" (Patel amicus).
 
 ## S.C.F.F. (Supreme Court of Fantasy Football)
@@ -32,6 +34,7 @@ Fictional precedents cited on the site. Add a line whenever a post cites a new o
 - Erich Dylus: God Emperor Commissioner, Presiding Justice of the court below.
 - David Lopez-Kurtz: league member, second member of the Rule 23 class (confirmed by Larry 2026-09-02).
 - Drew Hinkes: published the filings on X.
+- Larry Florio: amicus curiae in support of neither party, "League Member, Father of Two, Asleep by 10:30, and Proprietor of a Blog He Denies Operating." Children unnamed on the site by rule.
 - Samir Patel: amicus curiae for the Commissioner, "League Member, Digital Asset and AI Lawyer, and Holder of Zero Admin Keys."
 - Aaron: Clerk of the Court, self-appointed 2026-09-02 ("I am the clerk."). Surname not in the record.
 - David Kovari, Jacob Robinson, Nelson Rosario, Samir Patel, Andrew Thurman, Nick Pullman, Gerald Gallagher, Larry Florio: League members appearing in the chat record.
