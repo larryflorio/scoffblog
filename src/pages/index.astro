@@ -3,7 +3,7 @@ import { u } from '../lib';
 import Base from '../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 import { fmt, fmtShort, byDate } from '../lib';
-import { artFor } from '../art';
+import { artFor, artClass } from '../art';
 import { seal, right, left, arrow, building, chev } from '../components';
 const posts = (await getCollection('posts')).sort(byDate);
 const cases = await getCollection('cases');
@@ -40,7 +40,7 @@ const authors = [
     <div class="col left">
       {leftCol.map(p => (
         <div>
-          <a href={u(`/news/${p.id}`)} class="thumb"><img class="editorial-art" src={u(artFor(p))} alt="" loading="lazy" /></a>
+          <a href={u(`/news/${p.id}`)} class="thumb"><img class={artClass(artFor(p))} src={u(artFor(p))} alt={p.data.imageAlt ?? ""} loading="lazy" /></a>
           <span class="kicker">{p.data.kicker}</span>
           <h3 class="headline"><a href={u(`/news/${p.id}`)}>{p.data.title}</a></h3>
           <Fragment set:html={Byline(p)} />
@@ -49,7 +49,7 @@ const authors = [
     </div>
     <div class="col center">
       <div>
-        <a href={u(`/news/${lead.id}`)} class="thumb tall"><img class="editorial-art" src={u(artFor(lead))} alt="" /></a>
+        <a href={u(`/news/${lead.id}`)} class="thumb tall"><img class={artClass(artFor(lead))} src={u(artFor(lead))} alt={lead.data.imageAlt ?? ""} /></a>
         <span class="kicker">{lead.data.kicker}</span>
         <h3 class="headline"><a href={u(`/news/${lead.id}`)}>{lead.data.title}</a></h3>
         <Fragment set:html={Byline(lead)} />
@@ -80,7 +80,7 @@ const authors = [
 
   <div class="wrap">
     <div class="summit">
-      <div class="img"><img class="editorial-art" src={u(artFor(summitPost))} alt="" loading="lazy" /></div>
+      <div class="img"><img class={artClass(artFor(summitPost))} src={u(artFor(summitPost))} alt={summitPost.data.imageAlt ?? ""} loading="lazy" /></div>
       <div class="txt">
         <h3>Plenary Power and its Limits</h3>
         <p>A conversation between Marc Goldich, Pro Se, and the Office of the Clerk [trash bin], moderated by nobody, because Commissioner Dylus is not reading this essay.</p>
@@ -114,7 +114,7 @@ const authors = [
   <div class="wrap latest">
     <h2>Latest</h2>
     <a class="hero" href={u(`/news/${lead.id}`)}>
-      <div class="bg">{lead.data.image ? <img class="editorial-art" src={u(artFor(lead))} alt="" /> : <Fragment set:html={seal} />}</div>
+      <div class="bg">{lead.data.image ? <img class={artClass(artFor(lead))} src={u(artFor(lead))} alt={lead.data.imageAlt ?? ""} /> : <Fragment set:html={seal} />}</div>
       <div class="inner">
         <span class="kicker">{lead.data.kicker}</span>
         <h3>{lead.data.title}</h3>
@@ -157,7 +157,7 @@ const authors = [
   <div class="wrap authors">
     <div class="sec-head"><h2>Latest from our authors</h2><span><a class="btn" style="height:36px;padding:0 12px"><Fragment set:html={left} /></a> <a class="btn" style="height:36px;padding:0 12px"><Fragment set:html={right} /></a></span></div>
     <div class="row">
-      {authors.map(a => <div class="acard"><div class="top"><img class="editorial-art" src={u(artFor(a.p))} alt="" loading="lazy" /><span>{a.role}</span></div><div class="body"><span class="kicker">{a.p.data.kicker}</span><h3 class="headline"><a href={u(`/news/${a.p.id}`)}>{a.p.data.title}</a></h3><Fragment set:html={Byline(a.p)} /></div></div>)}
+      {authors.map(a => <div class="acard"><div class="top"><img class={artClass(artFor(a.p))} src={u(artFor(a.p))} alt={a.p.data.imageAlt ?? ""} loading="lazy" /><span>{a.role}</span></div><div class="body"><span class="kicker">{a.p.data.kicker}</span><h3 class="headline"><a href={u(`/news/${a.p.id}`)}>{a.p.data.title}</a></h3><Fragment set:html={Byline(a.p)} /></div></div>)}
     </div>
     <div class="meet"><a class="btn solid" href={u("/justices")}>Meet the Team <Fragment set:html={right} /></a></div>
   </div>

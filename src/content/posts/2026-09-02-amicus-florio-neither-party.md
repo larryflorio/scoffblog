@@ -4,7 +4,9 @@ kicker: "COURT NEWS"
 author: "SCOFFblog Staff"
 date: 2026-09-02T21:38:33-04:00
 dek: "Larry Florio, League member and father of two, files in support of neither party. He asks for 8:30, a timelock on decrees, and to be treated as \"the class representative the appellant forgot to be.\""
-image: "/art/amicus-florio.svg"
+image: "/photos/candlesticks.jpg"
+imageAlt: "A candlestick chart on a dark screen"
+imageCredit: "Maxim Hopman via Unsplash"
 case: "26-1-goldich-v-dylus"
 featured: false
 ---

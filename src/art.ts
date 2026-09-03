@@ -10,3 +10,6 @@ const kickerArt: Record<string, string> = {
 };
 
 export const artFor = (post: PostWithArt) => post.data.image ?? kickerArt[post.data.kicker] ?? '/art/default.svg';
+
+export const isArt = (path: string) => path.endsWith('.svg');
+export const artClass = (path: string) => (isArt(path) ? 'editorial-art' : 'editorial-photo');

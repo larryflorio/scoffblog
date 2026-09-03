@@ -4,7 +4,9 @@ kicker: "COURT NEWS"
 author: "SCOFFblog Staff"
 date: 2026-09-02T21:44:59-04:00
 dek: "A consolidated opposition counts three households behind the 10 p.m. draft, congratulates Patel on 1,095 days of marriage, and finds in the derivatives theory \"an argument less plausible than the Commissioner's.\""
-image: "/art/consolidated-opposition.svg"
+image: "/photos/classroom.jpg"
+imageAlt: "An empty classroom"
+imageCredit: "Ivan Aleksic via Unsplash"
 case: "26-1-goldich-v-dylus"
 featured: true
 ---

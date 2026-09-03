@@ -4,7 +4,9 @@ kicker: "COURT NEWS"
 author: "SCOFFblog Staff"
 date: 2026-09-02T18:51:21-04:00
 dek: "The Court will decide before Tuesday whether a Commissioner can end an appeal by not reading it. The Commissioner has not read the grant."
-image: "/art/cert-granted.svg"
+image: "/photos/football-grass.jpg"
+imageAlt: "A football in the grass"
+imageCredit: "Aloverit via Wikimedia Commons, CC BY-SA 4.0"
 case: "26-1-goldich-v-dylus"
 featured: false
 ---

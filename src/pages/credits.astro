@@ -1,0 +1,13 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { u } from '../lib';
+const posts = (await getCollection('posts')).filter(p => p.data.imageCredit).sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+<Base title="Photo credits" current="/credits">
+  <div class="hero-band"><h1>Photo Credits</h1><p>Where the pictures come from, since the Commissioner asked.</p></div>
+  <div class="wrap plain-list">
+    <p class="lede">Photographs on SCOFFblog are used under their published licenses: Unsplash photographs under the Unsplash License, Wikimedia Commons photographs under the Creative Commons license noted, and Library of Congress material in the public domain. Line illustrations are original to the site. Filings are reproduced with their authors' consent.</p>
+    {posts.map(p => <div class="item"><h3 class="headline" style="font-size:18px"><a href={u(`/news/${p.id}`)}>{p.data.title}</a></h3><div class="byline">{p.data.imageAlt}. {p.data.imageCredit}.</div></div>)}
+  </div>
+</Base>
