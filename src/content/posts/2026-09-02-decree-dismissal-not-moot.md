@@ -5,7 +5,7 @@ author: "SCOFFblog Staff"
 date: 2026-09-02
 dek: "The appellant dismissed his claims within the hour. The Commissioner says the new time is for his daughter's bedtime. The Court says a Commissioner who grants nothing can ungrant it, and the opinion will issue Monday."
 case: "26-1-goldich-v-dylus"
-featured: true
+featured: false
 ---
 
 Hours after his filings went viral, Marc Goldich got what he asked for, and the Court got a mootness problem.

@@ -10,6 +10,16 @@ Fictional precedents cited on the site. Add a line whenever a post cites a new o
 - *Robinson v. Dylus et al.* (2025), unreported: Jacob Robinson's prior-term complaints against the Commissioner. No record survives.
 - *Schrodinger v. Dylus*, 3 F.F. 1 (2026): an appeal "remains pending whether or not the Commissioner opens the PDF." Cited in the Emergency Motion to Compel.
 
+## Chain (cited by amicus Patel; a reporter this Court does not maintain)
+
+- *In re The DAO*, 1 Chain 1 (2016) (hard fork).
+- *Ethereum Classic v. Everyone Who Left*, 1 Chain 2 (2016) ("observing that the fork continued to exist, in the sense that things can").
+
+## Other authorities in the record
+
+- League Constitution, art. I ("The Commissioner decides."). Cited passim by amicus Patel; never produced.
+- *Marbury v. Madison*, 5 U.S. 137 (1803), "holding that someone gets to decide; cited by both sides for the same reason" (Patel amicus).
+
 ## S.C.F.F. (Supreme Court of Fantasy Football)
 
 - None yet. Volume 1 opens with No. 26-1, *Goldich v. Dylus*.
@@ -20,5 +30,6 @@ Fictional precedents cited on the site. Add a line whenever a post cites a new o
 - Erich Dylus: God Emperor Commissioner, Presiding Justice of the court below.
 - David Lopez-Kurtz: league member, second member of the Rule 23 class (confirmed by Larry 2026-09-02).
 - Drew Hinkes: published the filings on X.
+- Samir Patel: amicus curiae for the Commissioner, "League Member, Digital Asset and AI Lawyer, and Holder of Zero Admin Keys."
 - Aaron: Clerk of the Court, self-appointed 2026-09-02 ("I am the clerk."). Surname not in the record.
 - David Kovari, Jacob Robinson, Nelson Rosario, Samir Patel, Andrew Thurman, Nick Pullman, Gerald Gallagher, Larry Florio: League members appearing in the chat record.
