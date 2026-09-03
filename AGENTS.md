@@ -19,7 +19,7 @@ Satirical site: the Supreme Court of Fantasy Football (SCOFF), styled after SCOT
 
 ## Lead selection
 
-- The newest Court News post is the front-page lead unless Larry says otherwise. When publishing a post with `featured: true`, set the previous lead to `featured: false` in the same commit.
+- The newest post, by timestamp, is the front-page lead. The `featured` flag is ignored (Larry, 9/2). Give every post a real timestamp in `date` so ordering is unambiguous.
 - Docket timeline entries follow filing order as Larry states it, not the order documents arrived.
 - Filings are primary sources republished verbatim: any redaction (children's names or ages, anything a member asks to keep out) happens in the document before it is copied into `public/filings`, never only in the site's prose.
 

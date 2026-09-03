@@ -6,7 +6,7 @@ import { fmt, fmtShort, byDate } from '../lib';
 import { seal, right, left, arrow, building, chev } from '../components';
 const posts = (await getCollection('posts')).sort(byDate);
 const cases = await getCollection('cases');
-const lead = posts.find(p => p.data.featured) ?? posts[0];
+const lead = posts[0]; // newest post leads; the featured flag is ignored (house rule since 9/2)
 const others = posts.filter(p => p.id !== lead.id);
 const leftCol = others.slice(0, 2);
 const rightCol = others.slice(2);
