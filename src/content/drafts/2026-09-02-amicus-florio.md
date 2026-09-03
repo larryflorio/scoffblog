@@ -41,12 +41,12 @@ Rules and Other Authorities
 Fed. R. Civ. P. 23(e) (notice and court approval of class settlements; still in force, despite reports) ........ 2
 League Constitution, art. I ("The Commissioner decides.") (never produced; cited from memory) ........ passim
 Commodity Exchange Act, 7 U.S.C. § 1 et seq. (not binding on this League; persuasive on a Tuesday) ........ 5
-Bedtime, EJ and Lyla Florio (7:30 p.m.; 7:45 on a good night) ........ 4
+Bedtime, the Florio children (early; earlier than the Commissioner's) ........ 4
 Amicus's alarm (5:30 a.m.; not negotiable; set by persons possessing even greater arbitrary authority than the Commissioner) ........ 1
 
 INTEREST OF AMICUS CURIAE
 
-Amicus is a member of the League, a securities and derivatives lawyer, and the father of two children who attend preschool and who will, on Wednesday, September 9, wake him at 5:30 a.m. regardless of what this Court decides. He files in his personal capacity. He does not represent the League, the Commissioner, the appellant, or the blog that has covered this dispute since Wednesday evening, with which he denies any connection and whose traffic he checks hourly.
+Amicus is a member of the League, a securities and derivatives lawyer, and the father of two young children who will, on Wednesday, September 9, wake him at 5:30 a.m. regardless of what this Court decides. He files in his personal capacity. He does not represent the League, the Commissioner, the appellant, or the blog that has covered this dispute since Wednesday evening, with which he denies any connection and whose traffic he checks hourly.
 
 Amicus has no stake in whether the appellant attends Back-to-School Night. He has a stake in when the Draft ends. Under the relief the parties have now agreed on, it ends at approximately 12:45 a.m. Amicus writes because both parties have stopped arguing with each other and started agreeing at his expense, and because no one else in this League will be awake to object.
 
@@ -80,7 +80,7 @@ III. BEDTIMES ARE NOT A STANDARD OF REVIEW, AND IF THEY WERE, AMICUS WOULD WIN.
 
 The Commissioner denied the motion on the ground that he did not want to. He then moved the Draft on the ground that "the 10pm time is better for my daughter's bedtime." The Court is asked to reconcile these positions. Amicus submits they cannot be reconciled, and that the second is worse than the first.
 
-"I don't want to" is at least a rule. It applies to everyone. "My daughter's bedtime" is a rule that applies to one household. If a child's bedtime is a cognizable interest in the scheduling of the Draft, then the interest belongs to every child in the League, and amicus has two. EJ and Lyla Florio are asleep by 7:30 p.m. on a good night and 7:45 on the other kind. A draft that begins at 10:00 p.m. and ends at 12:45 a.m. does not conflict with their bedtime. It conflicts with their wake-up, which is 5:30 a.m., is enforced by persons possessing even greater arbitrary authority than the Commissioner, and does not move for fantasy football.
+"I don't want to" is at least a rule. It applies to everyone. "My daughter's bedtime" is a rule that applies to one household. If a child's bedtime is a cognizable interest in the scheduling of the Draft, then the interest belongs to every child in the League, and amicus has two. Amicus's children are asleep early on a good night and slightly less early on the other kind. A draft that begins at 10:00 p.m. and ends at 12:45 a.m. does not conflict with their bedtime. It conflicts with their wake-up, which is 5:30 a.m., is enforced by persons possessing even greater arbitrary authority than the Commissioner, and does not move for fantasy football.
 
 The Commissioner's decree therefore counts one bedtime and ignores the rest. That is the arbitrary part. What the record lacks, and what the Commissioner's own standard requires, is anything glorious about it. See Goldich v. Dylus, 2 F.F. 10 (2026) ("Come on, man.").[1]
 
