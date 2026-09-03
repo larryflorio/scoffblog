@@ -44,6 +44,25 @@ p { margin: 0 0 1em; }
 .secondary a:first-child { border-left: 0; }
 .secondary a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
+/* ===== Mobile header + menu ===== */
+.m-head { display: none; background: var(--white); border-bottom: 1px solid var(--rule); }
+.m-head .wrap { display: grid; grid-template-columns: 44px 1fr 44px; align-items: center; height: 74px; padding: 0 16px; }
+.m-head .wordmark { text-align: center; font-size: 34px; }
+.sq { width: 44px; height: 44px; background: var(--navy); color: #faf7f5; border: 0; display: inline-flex; align-items: center; justify-content: center; padding: 0; cursor: pointer; }
+.sq svg { width: 18px; height: 18px; }
+.m-menu { position: fixed; inset: 0; z-index: 50; background: var(--white); overflow-y: auto; }
+.m-menu .wrap { padding: 0 16px 30px; }
+.m-menu-head { display: grid; grid-template-columns: 44px 1fr 44px; align-items: center; height: 74px; }
+.m-menu-head .wordmark { text-align: center; font-size: 34px; }
+.m-menu nav { display: flex; flex-direction: column; margin-top: 10px; }
+.m-menu nav a { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 30px 0; border-bottom: 1px solid var(--rule); font-size: 22px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--navy); }
+.m-menu nav a .arr { width: 22px; height: 22px; flex: none; }
+.m-menu nav a.srch { justify-content: flex-start; }
+.m-menu nav a.srch svg:first-child { width: 20px; height: 20px; margin-right: 8px; }
+.m-menu nav a.srch .arr { margin-left: auto; }
+.m-subscribe { display: block; margin-top: 34px; background: var(--navy); color: #faf7f5; text-align: center; font-size: 22px; padding: 22px 0; }
+html.m-lock { overflow: hidden; }
+
 /* ===== Kickers, bylines ===== */
 .kicker { display: inline-block; font-size: 12px; font-style: italic; text-transform: uppercase; letter-spacing: -0.01em; color: var(--ink); background: var(--chip); padding: 2px 6px; line-height: 1.3; }
 .kicker.plain { background: none; padding: 0; }
@@ -271,6 +290,19 @@ table.docket td.n { white-space: nowrap; color: var(--ink-3); }
 .cards-3 { grid-template-columns: 1fr 1fr 1fr; }
 .stats-3 { grid-template-columns: repeat(3, 1fr); }
 @media (max-width: 1100px) { .cards-3 { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 860px) {
+  .utility, .masthead, .secondary { display: none; }
+  .m-head { display: block; }
+  .front { display: flex; flex-direction: column; gap: 0; padding-top: 22px; }
+  .front .col { display: contents; }
+  .front .col > * { margin: 0 0 28px; }
+  .front .center { order: -1; }
+  .front .center > * { order: -1; }
+  .thumb, .thumb.tall { aspect-ratio: 4 / 3.1; margin-bottom: 12px; }
+  .front .headline, .front .center .headline, .front .right .headline { font-size: 22px; }
+  .article-head .byline > span { display: flex; flex-direction: column; gap: 2px; }
+  .article-head .byline .sep { display: none; }
+}
 @media (max-width: 720px) {
   .cards-3, .next .cards { grid-template-columns: 1fr; }
   .stats-3 { grid-template-columns: 1fr 1fr; }
@@ -309,15 +341,6 @@ table.docket td.n { white-space: nowrap; color: var(--ink-3); }
   table.docket th, table.docket td { padding: 12px 10px; font-size: 14px; }
   .tile { padding: 20px; }
   body { font-size: 16px; }
-  .utility .wrap { gap: 10px; }
-  .utility nav { gap: 12px; font-size: 11px; overflow-x: auto; white-space: nowrap; }
-  .utility .tools a { min-width: 30px; height: 30px; padding: 0 8px; }
-  .utility .tools a.login { display: none; }
-  .masthead { height: 70px; }
-  .masthead .wrap { grid-template-columns: 1fr; justify-items: center; }
-  .masthead nav { display: none; }
-  .wordmark { font-size: 32px; }
-  .secondary .wrap { overflow-x: auto; justify-content: flex-start; white-space: nowrap; }
   .front { grid-template-columns: 1fr; padding-top: 28px; }
   .summit { grid-template-columns: 1fr; }
   .sec-head h2, .latest h2, .term h2, .more h2, .authors h2 { font-size: 30px; }
@@ -378,4 +401,6 @@ table.docket td.n { white-space: nowrap; color: var(--ink-3); }
   .utility, .utility nav a, .utility .tools a, .masthead .subscribe, .btn.solid, .cal .bar, .cal td.today span.n, .hero h3, .hero .byline, .hero .byline .name, .hero .byline i, .hero-band, .hero-band h1, .hero-band p, footer, footer .wordmark, footer h5, footer a, footer .blurb, footer .bottom, footer .disclaimer, .side .promo, .side .promo p, .side .promo small, .newsletter button, .side .promo button, .more .filters span.on, .btn.ruby { color: #faf7f5; }
   .btn.solid, .more .filters span.on { color: #fff; }
   .thumb.seal svg, .hero .bg svg { color: #faf7f5; }
+  .sq, .m-subscribe { background: #2a3f8f; color: #faf7f5; }
+  .m-menu nav a { color: #8fa3e6; }
 }

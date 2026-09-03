@@ -1,7 +1,7 @@
 ---
 import { u } from '../lib';
 import '../styles/global.css';
-import { chev, search, person } from '../components';
+import { chev, search, person, arrowRight, menuIcon, closeIcon } from '../components';
 interface Props { title?: string; description?: string; current?: string }
 const { title, description = 'Independent news and analysis on the Supreme Court of Fantasy Football.', current } = Astro.props;
 const fullTitle = title ? `${title} | SCOFFblog` : 'SCOFFblog: Independent news and analysis on the Supreme Court of Fantasy Football';
@@ -22,6 +22,39 @@ const fullTitle = title ? `${title} | SCOFFblog` : 'SCOFFblog: Independent news 
     <link rel="icon" href={u("/favicon.svg")} type="image/svg+xml" />
   </head>
   <body>
+    <header class="m-head">
+      <div class="wrap">
+        <a class="sq" href={u("/about")} aria-label="Account"><Fragment set:html={person} /></a>
+        <a class="wordmark" href={u("/")} aria-label="SCOFFblog"><b>SCOFF</b>blog</a>
+        <button class="sq" id="m-open" aria-label="Open menu" aria-controls="m-menu" aria-expanded="false"><Fragment set:html={menuIcon} /></button>
+      </div>
+    </header>
+    <div class="m-menu" id="m-menu" hidden>
+      <div class="wrap">
+        <div class="m-menu-head">
+          <a class="sq" href={u("/about")} aria-label="Account"><Fragment set:html={person} /></a>
+          <a class="wordmark" href={u("/")}><b>SCOFF</b>blog</a>
+          <button class="sq" id="m-close" aria-label="Close menu"><Fragment set:html={closeIcon} /></button>
+        </div>
+        <nav>
+          <a href={u("/news")}>News <Fragment set:html={arrowRight} /></a>
+          <a href={u("/news")}>Commentary <Fragment set:html={arrowRight} /></a>
+          <a href={u("/cases")}>Cases <Fragment set:html={arrowRight} /></a>
+          <a href={u("/statistics")}>Statistics <Fragment set:html={arrowRight} /></a>
+          <a href={u("/calendar")}>Calendar</a>
+          <a href={u("/emergency-docket")}>Emergency Docket <Fragment set:html={arrowRight} /></a>
+          <a href={u("/about")}>Newsletters <Fragment set:html={arrowRight} /></a>
+          <a href={u("/about")}>Podcasts <Fragment set:html={arrowRight} /></a>
+          <a href={u("/justices")}>Justices</a>
+          <a href={u("/about")}>About <Fragment set:html={arrowRight} /></a>
+          <a href={u("/cases")} class="srch"><Fragment set:html={search} /> Search <Fragment set:html={arrowRight} /></a>
+        </nav>
+        <a class="m-subscribe" href={u("/about")}>Subscribe</a>
+      </div>
+    </div>
+    <script is:inline>
+      (function(){var o=document.getElementById('m-open'),c=document.getElementById('m-close'),m=document.getElementById('m-menu');if(!o||!m)return;function set(v){m.hidden=!v;o.setAttribute('aria-expanded',v?'true':'false');document.documentElement.classList.toggle('m-lock',v);}o.addEventListener('click',function(){set(true)});c.addEventListener('click',function(){set(false)});})();
+    </script>
     <div class="utility">
       <div class="wrap">
         <nav>
