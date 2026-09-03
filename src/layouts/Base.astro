@@ -20,6 +20,7 @@ const fullTitle = title ? `${title} | SCOFFblog` : 'SCOFFblog: Independent news 
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary" />
     <link rel="icon" href={u("/favicon.svg")} type="image/svg+xml" />
+    <link rel="alternate" type="application/rss+xml" title="SCOFFblog" href={u("/rss.xml")} />
   </head>
   <body>
     <header class="m-head">
@@ -119,7 +120,7 @@ const fullTitle = title ? `${title} | SCOFFblog` : 'SCOFFblog: Independent news 
         <div><h5>Coverage</h5><ul><li><a href={u("/news")}>Latest News</a></li><li><a href={u("/news")}>Recurring Columns</a></li><li><a href={u("/news")}>Outside Opinions</a></li><li><a href={u("/emergency-docket")}>Interim Docket Blog</a></li></ul></div>
         <div><h5>Cases</h5><ul><li><a href={u("/cases")}>Oral Argument Docket</a></li><li><a href={u("/emergency-docket")}>Interim Docket</a></li><li><a href={u("/cases")}>Petitions</a></li><li><a href={u("/cases")}>Capital Cases</a></li><li><a href={u("/calendar")}>Calendar</a></li><li><a href={u("/statistics")}>Statistics</a></li></ul></div>
         <div><h5>Podcasts</h5><ul><li><a href={u("/about")}>Advisory Opinions</a></li><li><a href={u("/about")}>Divided Argument</a></li><li><a href={u("/about")}>Waiver Wire Watch</a></li></ul></div>
-        <div><h5>Newsletters</h5><ul><li><a href={u("/about")}>SCOFFtoday</a></li><li><a href={u("/about")}>SCOFF Opinions</a></li></ul></div>
+        <div><h5>Newsletters</h5><ul><li><a href={u("/about")}>SCOFFtoday</a></li><li><a href={u("/about")}>SCOFF Opinions</a></li><li><a href={u("/rss.xml")}>RSS feed</a></li></ul></div>
         <div><h5>About</h5><ul><li><a href={u("/about")}>Manifesto</a></li><li><a href={u("/justices")}>Staff</a></li><li><a href={u("/about")}>Contact Us</a></li><li><a href={u("/about")}>Submissions</a></li><li><a href={u("/about")}>FAQs</a></li><li><a href={u("/about")}>Merch</a></li></ul></div>
       </div>
       <div class="bottom">
