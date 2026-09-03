@@ -300,8 +300,9 @@ table.docket td.n { white-space: nowrap; color: var(--ink-3); }
   .front .center > * { order: -1; }
   .thumb, .thumb.tall { aspect-ratio: 4 / 3.1; margin-bottom: 12px; }
   .front .headline, .front .center .headline, .front .right .headline { font-size: 22px; }
-  .article-head .byline > span { display: flex; flex-direction: column; gap: 2px; }
+  .article-head .byline > span { display: block; line-height: 1.5; }
   .article-head .byline .sep { display: none; }
+  .article-head .byline .date { display: block; }
 }
 @media (max-width: 720px) {
   .cards-3, .next .cards { grid-template-columns: 1fr; }
