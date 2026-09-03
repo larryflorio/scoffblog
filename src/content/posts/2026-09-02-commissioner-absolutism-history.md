@@ -10,36 +10,34 @@ imageCredit: "Library of Congress, public domain"
 case: "26-1-goldich-v-dylus"
 ---
 
-Every argument in *Goldich v. Dylus* runs into the same wall, and the wall has a name. Article I of the League Constitution, which no one has produced and everyone cites, reads in its entirety: "The Commissioner decides." The Commissioner's own reporter, *The Commissioner Says So*, 1 F.F. 1 (perpetual), holds the same thing at greater length. Amicus Patel calls this an admin key. The appellant calls it tyranny. The Commissioner calls it Tuesday.
+Every argument in *Goldich v. Dylus* runs into the same wall. Article I of the League Constitution, which nobody has produced and everybody cites, reads in full: "The Commissioner decides." The Commissioner's own reporter, *The Commissioner Says So*, 1 F.F. 1 (perpetual), says the same thing at greater length. Amicus Patel describes the arrangement as an admin key, the appellant as tyranny, and the Commissioner, so far as the record shows, as normal.
 
-None of it is new. The office of commissioner was invented to be absolute, and the law has spent a century deciding how much of that to tolerate.
+The office was built that way on purpose, and the law has spent a century deciding how much of it to tolerate.
 
-## The original sin, 1920
+## 1920
 
-Professional sports did not have commissioners until baseball needed one. After the 1919 World Series was thrown, the owners hired a federal judge, Kenesaw Mountain Landis, and gave him authority to act in the "best interests" of the game, with the owners agreeing in advance not to challenge his rulings in court. Landis took the job on the condition that the power be real. It was. He banned the eight Black Sox players for life after a jury had acquitted them, on the reasoning that a verdict in a courtroom was not a verdict in his.
+Professional sports had no commissioners until baseball needed one. After the 1919 World Series was thrown, the owners hired a federal judge, Kenesaw Mountain Landis, and gave him authority to act in the best interests of the game, agreeing in advance not to challenge his rulings in court. Landis took the job on the condition that the power be real. He then banned the eight Black Sox players for life after a jury had acquitted them, on the reasoning that a verdict in a courtroom was not a verdict in his.
 
-That is the template. A commissioner is not a judge who applies rules. He is a person whose judgment is the rule, installed precisely because the parties could not trust one another to follow any other kind. "I don't want to" is a degraded form of "best interests of the game," but it is the same form: a standard that lives inside the decision-maker and cannot be checked from outside.
+A commissioner in this mold does not apply rules. His judgment is the rule, and he is installed precisely because the parties could not trust one another to follow any other kind. "I don't want to" is a shorter version of "best interests of the game," and it works the same way: the standard lives inside the person deciding, where nobody else can check it.
 
-## The courts, mostly, went along
+## What the courts did with it
 
-The striking thing about the case law is how rarely it pushed back. When Bowie Kuhn voided Charlie Finley's sale of three Oakland players in 1976, Finley sued and lost. The Seventh Circuit held in *Finley v. Kuhn*, 569 F.2d 527 (7th Cir. 1978), that the commissioner's best-interests power reached the transaction, and that a court's role was not to ask whether the decision was wise but whether it was within the authority the owners had granted. Finley had signed the Major League Agreement. He had agreed to be decided.
+They mostly deferred. When Bowie Kuhn voided Charlie Finley's sale of three Oakland players in 1976, Finley sued and lost. The Seventh Circuit held in *Finley v. Kuhn*, 569 F.2d 527 (7th Cir. 1978), that the best-interests power reached the transaction and that a court's job was to ask whether the decision fell within the authority the owners had granted, not whether it was wise. Finley had signed the Major League Agreement. He had agreed to be decided.
 
-Forty years later the NFL Players Association made the modern version of the same argument against Roger Goodell, and the Second Circuit gave the modern version of the same answer. *National Football League Management Council v. NFLPA*, 820 F.3d 527 (2d Cir. 2016), reinstated Tom Brady's four-game suspension on the ground that the collective bargaining agreement's Article 46 gave the commissioner authority to discipline and to hear the appeal of his own discipline, and that the union had bargained for exactly that. The court did not say Goodell was right. It said the players had agreed that he got to decide, and that the reviewing court's job ended there.
+Forty years later the NFL Players Association ran the modern version of the argument against Roger Goodell and got the modern version of the answer. In *National Football League Management Council v. NFLPA*, 820 F.3d 527 (2d Cir. 2016), the Second Circuit reinstated Tom Brady's four-game suspension because Article 46 of the collective bargaining agreement let the commissioner impose discipline and hear the appeal from it, and the union had bargained for that. The court did not say Goodell was right. It said the players had agreed he got to decide.
 
-The doctrine, then, is not that commissioners are wise. It is that consent to arbitrary authority is enforceable, and that a party who signed up for a decider does not get a judge later because the decider decided against him.
+So the doctrine has never been that commissioners are wise. It is that consent to arbitrary authority is enforceable, and that a party who signed up for a decider does not get a judge later because the decider ruled against him.
 
-## Where this League's doctrine departs
+## Where this League's version differs
 
-The appellant's filings assume the Commissioner is a court whose reasoning can be inadequate. Patel's amicus assumes he is a contract whose output cannot be. The century of case law is closer to Patel, which is why this Court's grant of certiorari was more radical than it looked. Landis, Kuhn, and Goodell were reviewed, when they were reviewed at all, on whether they acted within their office. Nobody asked Landis for a reason.
+The appellant's filings treat the Commissioner as a court whose reasoning can fall short. Patel's brief treats him as a contract whose output cannot. A century of case law sits closer to Patel, which is why this Court's grant of certiorari was a larger step than it looked. Landis, Kuhn, and Goodell were reviewed, when they were reviewed at all, on whether they had acted within their office. Nobody asked Landis for a reason, and the courts never suggested he owed one.
 
-But the League's doctrine has one feature the leagues never had. Every prior commissioner drew authority from a document the parties signed: the Major League Agreement, the CBA. The Commissioner here draws his from Article I, which is cited by everyone and produced by no one, and from *The Commissioner Says So*, which he wrote. When the appellant argued that no appellate court existed and cured the defect by creating one, he was doing something Finley could not: pointing out that the grant of authority is itself unproduced, and that a power nobody can find the source of is a power the League can revise by finding a different one.
+One thing separates the League from the leagues. Every earlier commissioner drew his power from a document the parties had signed: the Major League Agreement, the CBA. This Commissioner draws his from an Article I that no one can find and from a reporter he wrote himself. When the appellant argued that no appellate court existed and cured the problem by creating one, he was doing something Finley could not do, which was to point at the grant of authority and observe that it had never been produced. A power whose source cannot be located is a power the League can revise by locating a different one.
 
-That is the argument this Court's mootness order quietly adopted. The Commissioner's decree moving the draft was not an exercise of best-interests authority. He said so himself: "I grant nothing." It was an act of will explained by a bedtime. A century of doctrine protects commissioners who decide. It has less to say about commissioners who insist they did not.
+That is also the ground the Court's mootness order quietly took. The decree moving the draft was not an exercise of best-interests authority, and the Commissioner said as much: "I grant nothing." It was an act of will explained by a bedtime. The doctrine protects commissioners who decide, and has less to say about commissioners who insist they did not.
 
-## The absolutist's dilemma
+## The recurring problem
 
-Which brings the office to its recurring problem. Absolute authority is stable only if it is never exercised in a way anyone can see. Landis banned players and the owners kept their agreement not to sue. Goodell suspended Brady and the union litigated for two years. The Commissioner here denied a motion in nine characters and moved the draft in a text, and within six hours had two amici, one intervenor, a court, and a blog.
+Absolute authority is stable only while nobody has to watch it work. Landis banned players and the owners kept their promise not to sue. Goodell suspended Brady and the union litigated for two years. The Commissioner here denied a motion in nine characters, moved the draft by text, and within six hours had two amici, an intervenor, a court, and a blog.
 
-The lesson the leagues learned was to put the power in writing and make the members sign. The lesson this League is learning is what happens when you skip that step: the power still exists, but so does everyone's opinion of it, and the opinions have docket numbers now.
-
-Jacob Robinson has proposed a constitution. The Commissioner has proposed a "Constitutional Dictatorship." The difference between those two is the whole history above, and the League will find out Monday which one it has.
+The leagues learned to put the power in writing and make everyone sign. This League skipped that step, and the result is that the power still exists alongside everyone's opinion of it, and the opinions now have docket numbers. Jacob Robinson has proposed a constitution. The Commissioner has countered with a "Constitutional Dictatorship." The League finds out Monday which of those it has.
