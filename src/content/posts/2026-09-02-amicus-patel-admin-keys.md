@@ -5,7 +5,7 @@ author: "SCOFFblog Staff"
 date: 2026-09-02
 dek: "Samir Patel, League member and holder of zero admin keys, files in support of the Commissioner. He would like the Court to consider whether any of this is real."
 case: "26-1-goldich-v-dylus"
-featured: true
+featured: false
 ---
 
 The first amicus brief in *Goldich v. Dylus* arrived Wednesday night, and it is for the Commissioner.

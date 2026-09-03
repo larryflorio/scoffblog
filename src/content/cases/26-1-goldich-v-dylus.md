@@ -21,12 +21,14 @@ timeline:
   - { date: "Sep 2, 2026", entry: "Appellant announces in the League chat that he \"voluntarily dismisses all remaining claims.\" Commissioner confirms the Draft will move to 10:00 p.m. \"by authoritarian decree,\" citing his daughter's bedtime, and states: \"I grant nothing.\"" }
   - { date: "Sep 2, 2026", entry: "Appellant notifies co-plaintiff David Lopez-Kurtz that costs will be apportioned equally among the named plaintiffs, and characterizes the outcome as a settlement in principle \"with each side to bear its own costs and bribes.\"" }
   - { date: "Sep 2, 2026", entry: "Brief amicus curiae of Samir Patel, League Member and Holder of Zero Admin Keys, in support of appellee, filed. Argues the Commissioner holds the admin key, \"I don't want to\" is a valid oracle output, the trash bin is a burn address, and two is a group chat." }
+  - { date: "Sep 2, 2026", entry: "Appellant's Response to Brief of Amicus Curiae filed. One page. Declines to reach the merits; the draft is at 10:00 p.m., \"on that point, the parties finally agree.\" Signed \"Recipient of Complete Relief, Still Undefeated in Motions Practice.\"" }
   - { date: "Sep 2, 2026", entry: "ORDER: motion to dismiss as moot (construed from the Commissioner's silence) DENIED. Voluntary cessation; capable of repetition yet evading review. Opinion to issue Sep 7 as scheduled. Aaron appointed Clerk of the Court on his own motion." }
 exhibits:
   - { label: "Memorandum Opinion and Order, No. 26-FF-0831 (U.S.F.F.C.A. Sep 2, 2026) (Dylus, Presiding Justice). PDF.", src: "/exhibits/26-FF-0831-order.png", pdf: "/filings/26-FF-0831-order.pdf" }
   - { label: "Notice of Appeal and Emergency Motion for Reversal, No. 26-FF-0831 (U.S.F.F.C.A. Sep 2, 2026). Filed pro se. PDF.", src: "/exhibits/26-FF-0831-notice-of-appeal.png", pdf: "/filings/26-FF-0831-notice-of-appeal.pdf" }
   - { label: "Emergency Motion to Compel Judicial Review and to Vacate Improper Referral to the Clerk, No. 26-FF-0831 (U.S.F.F.C.A. Sep 2, 2026). PDF.", src: "/exhibits/26-FF-0831-motion-to-compel.png", pdf: "/filings/26-FF-0831-motion-to-compel.pdf" }
   - { label: "Brief of Samir Patel as Amicus Curiae in Support of Appellee, No. 26-1 (S.C.F.F. Sep 2, 2026). Filed pro se. PDF; original Word file also available.", src: "/exhibits/26-1-amicus-patel.png", pdf: "/filings/26-1-amicus-patel.pdf" }
+  - { label: "Appellant's Response to Brief of Amicus Curiae, No. 26-1 (S.C.F.F. Sep 2, 2026). Filed pro se. PDF.", src: "/exhibits/26-1-response-to-amicus.png", pdf: "/filings/26-1-response-to-amicus.pdf" }
 external:
   - { label: "The filings as first published on X (Drew Hinkes, @propelforward)", href: "https://x.com/propelforward/status/2095201135019598179" }
 ---
