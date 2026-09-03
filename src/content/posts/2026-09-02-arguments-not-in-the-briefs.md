@@ -2,7 +2,7 @@
 title: "The arguments that didn't make the briefs"
 kicker: "SCOFF FOCUS"
 author: "SCOFFblog Staff"
-date: 2026-09-02
+date: 2026-09-02T20:51:36-04:00
 dek: "Retaliation, parallel-universe litigation, a dues strike, and the formatting dispute. What the appellant said in the chat that he had the discipline to leave out of the filings."
 case: "26-1-goldich-v-dylus"
 ---

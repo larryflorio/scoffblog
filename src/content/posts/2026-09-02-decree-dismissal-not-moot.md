@@ -2,7 +2,7 @@
 title: "Commissioner moves draft to 10 p.m. by decree, insists he granted nothing; Court holds the case is not moot"
 kicker: "COURT NEWS"
 author: "SCOFFblog Staff"
-date: 2026-09-02
+date: 2026-09-02T20:51:36-04:00
 dek: "The appellant dismissed his claims within the hour. The Commissioner says the new time is for his daughter's bedtime. The Court says a Commissioner who grants nothing can ungrant it, and the opinion will issue Monday."
 case: "26-1-goldich-v-dylus"
 featured: false

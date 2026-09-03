@@ -2,7 +2,7 @@
 title: "Amicus concedes the draft is at 10 p.m., preserves his objection, and asks the Court to adjourn \"before anyone thinks of something else to file\""
 kicker: "COURT NEWS"
 author: "SCOFFblog Staff"
-date: 2026-09-02
+date: 2026-09-02T21:43:54-04:00
 dek: "A three-page supplemental brief withdraws the request for relief and keeps the displeasure. \"Acquiescence is not waiver,\" a distinction \"well established in every marriage in the League.\""
 case: "26-1-goldich-v-dylus"
 featured: false

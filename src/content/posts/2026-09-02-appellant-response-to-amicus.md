@@ -2,7 +2,7 @@
 title: "Appellant answers the amicus in one page: the draft is at 10 p.m., \"on that point, the parties finally agree\""
 kicker: "COURT NEWS"
 author: "SCOFFblog Staff"
-date: 2026-09-02
+date: 2026-09-02T21:18:58-04:00
 dek: "Marc Goldich declines to engage the admin-key theory, thanks amicus for calling his brief \"very good,\" and signs as Recipient of Complete Relief."
 case: "26-1-goldich-v-dylus"
 featured: false

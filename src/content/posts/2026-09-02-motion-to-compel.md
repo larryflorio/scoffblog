@@ -2,7 +2,7 @@
 title: "Appellant asks Court to deem 10 p.m. draft time effective \"by default or by contempt\""
 kicker: "EMERGENCY DOCKET"
 author: "SCOFFblog Staff"
-date: 2026-09-02
+date: 2026-09-02T19:05:09-04:00
 dek: "The emergency motion to compel judicial review objects to the referral of a live appeal to a trash bin."
 case: "26-1-goldich-v-dylus"
 ---

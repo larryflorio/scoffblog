@@ -2,7 +2,7 @@
 title: "Goldich answers both objectors: \"Fantasy football is entertainment. Back-to-School Night is a parental obligation. This should not require a citation.\""
 kicker: "COURT NEWS"
 author: "SCOFFblog Staff"
-date: 2026-09-02
+date: 2026-09-02T21:44:59-04:00
 dek: "A consolidated opposition counts three households behind the 10 p.m. draft, congratulates Patel on 1,095 days of marriage, and finds in the derivatives theory \"an argument less plausible than the Commissioner's.\""
 case: "26-1-goldich-v-dylus"
 featured: true

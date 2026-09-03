@@ -2,7 +2,7 @@
 title: "The Phantom Clerk Doctrine, explained"
 kicker: "SCOFF FOCUS"
 author: "SCOFFblog Staff"
-date: 2026-09-02
+date: 2026-09-02T18:51:21-04:00
 dek: "How a trash bin acquired appellate jurisdiction, and why the Court may take it away."
 case: "26-1-goldich-v-dylus"
 ---

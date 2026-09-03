@@ -2,7 +2,7 @@
 title: "Amicus brief: the Commissioner holds the admin key, \"I don't want to\" is a valid oracle output, and two is a group chat"
 kicker: "COURT NEWS"
 author: "SCOFFblog Staff"
-date: 2026-09-02
+date: 2026-09-02T21:14:10-04:00
 dek: "Samir Patel, League member and holder of zero admin keys, files in support of the Commissioner. He would like the Court to consider whether any of this is real."
 case: "26-1-goldich-v-dylus"
 featured: false

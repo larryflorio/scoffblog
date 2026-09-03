@@ -2,7 +2,7 @@
 title: "Patel moves to intervene, calls the settlement collusive, and asks the Court to enforce the order the Commissioner forgot he signed"
 kicker: "COURT NEWS"
 author: "SCOFFblog Staff"
-date: 2026-09-02
+date: 2026-09-02T21:33:54-04:00
 dek: "The amicus for the Commissioner is now against him. \"Movant regrets that he was right about the standard and wrong about the man.\""
 case: "26-1-goldich-v-dylus"
 featured: false

@@ -2,7 +2,7 @@
 title: "Second amicus opposes both parties: the draft is a derivatives market, and 10 p.m. is after-hours trading"
 kicker: "COURT NEWS"
 author: "SCOFFblog Staff"
-date: 2026-09-02
+date: 2026-09-02T21:38:33-04:00
 dek: "Larry Florio, League member and father of two, files in support of neither party. He asks for 8:30, a timelock on decrees, and to be treated as \"the class representative the appellant forgot to be.\""
 case: "26-1-goldich-v-dylus"
 featured: false

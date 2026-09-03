@@ -2,7 +2,7 @@
 title: "Enhance the League minority's procedural powers"
 kicker: "SCOFF OUTSIDE OPINIONS"
 author: "A Concerned League Member"
-date: 2026-09-02
+date: 2026-09-02T19:05:09-04:00
 dek: "A class of two is still a class. The rules should say so before the next parent has to sue."
 case: "26-1-goldich-v-dylus"
 ---
