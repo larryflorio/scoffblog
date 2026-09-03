@@ -5,7 +5,7 @@ author: "SCOFFblog Staff"
 date: 2026-09-02
 dek: "Larry Florio, League member and father of two, files in support of neither party. He asks for 8:30, a timelock on decrees, and to be treated as \"the class representative the appellant forgot to be.\""
 case: "26-1-goldich-v-dylus"
-featured: true
+featured: false
 ---
 
 A second amicus brief was filed Wednesday night, this one in support of neither party. Its author, Larry Florio, is a League member, a securities and derivatives lawyer, and the father of two young children. SCOFFblog notes for the record that he is also the proprietor of this publication, a connection the brief says he "denies" and about which "he checks the traffic hourly." SCOFFblog has no comment.

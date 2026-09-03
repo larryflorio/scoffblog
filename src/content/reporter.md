@@ -22,6 +22,7 @@ Fictional precedents cited on the site. Add a line whenever a post cites a new o
 - Third Wedding Anniversary (Sept. 4, 2026) (controlling) (Patel motion to intervene).
 - *SEC v. W.J. Howey Co.*, 328 U.S. 293 (1946), "cited in a footnote, where it belongs" (Florio amicus).
 - Commodity Exchange Act, 7 U.S.C. § 1 et seq., "not binding on this League; persuasive on a Tuesday" (Florio amicus).
+- Fed. R. Civ. P. 46 (formal exceptions unnecessary; objection preserved) (Florio supplemental amicus).
 - *Marbury v. Madison*, 5 U.S. 137 (1803), "holding that someone gets to decide; cited by both sides for the same reason" (Patel amicus).
 
 ## S.C.F.F. (Supreme Court of Fantasy Football)
