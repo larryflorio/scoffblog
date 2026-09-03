@@ -29,7 +29,7 @@ This is the argument that likely moved the draft. Two members not paying their d
 
 ## Cost apportionment
 
-Having won, the appellant billed his class. "David, as co-named plaintiff, this seems like an appropriate time to advise you that all fees, costs, and administrative expenses associated with this litigation will be apportioned equally among the named plaintiffs." David, whose only act in this litigation was to have children at the same school, is now responsible for half of nothing, which the appellant has not yet invoiced.
+Having won, the appellant billed his class. "David, as co-named plaintiff, this seems like an appropriate time to advise you that all fees, costs, and administrative expenses associated with this litigation will be apportioned equally among the named plaintiffs." David Lopez-Kurtz, whose only act in this litigation was to have children at the same school, is now responsible for half of nothing, which the appellant has not yet invoiced.
 
 ## Settlement
 

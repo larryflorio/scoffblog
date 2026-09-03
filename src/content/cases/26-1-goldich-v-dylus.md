@@ -7,7 +7,7 @@ status: "Granted"
 issues:
   - "Whether a Commissioner's referral of a timely notice of appeal to the Office of the Clerk [trash bin] divests the Fantasy Football Court of Appeals of jurisdiction, or merely of dignity."
   - "Whether \"I don't want to\" constitutes reasoning sufficient to survive abuse-of-discretion review, and whether the Commissioner's \"sole and gloriously arbitrary discretion\" is a standard of review or a confession."
-  - "Whether Rule 23 permits certification of a class of two, where both members are parents with children at the same school and both would prefer to attend Back-to-School Night."
+  - "Whether Rule 23 permits certification of a class of two, where both members, Marc Goldich and David Lopez-Kurtz, are parents with children at the same school and both would prefer to attend Back-to-School Night."
   - "Whether an appellate court created by the appellant, after the ruling appealed from, has jurisdiction over that ruling under the ancient and controlling principle of \"too late.\""
 granted: 2026-09-02
 timeline:
@@ -19,7 +19,7 @@ timeline:
   - { date: "Sep 2, 2026", entry: "Appellant's filings published to X by Drew Hinkes. Views exceed 660,000. Commissioner's position on the merits unchanged; his position on fame, evolving." }
   - { date: "Sep 2, 2026", entry: "Petition for certiorari before judgment GRANTED. Expedited briefing ordered. Briefs due Sep 4. Argument set for Sep 6 in the group chat." }
   - { date: "Sep 2, 2026", entry: "Appellant announces in the League chat that he \"voluntarily dismisses all remaining claims.\" Commissioner confirms the Draft will move to 10:00 p.m. \"by authoritarian decree,\" citing his daughter's bedtime, and states: \"I grant nothing.\"" }
-  - { date: "Sep 2, 2026", entry: "Appellant notifies co-plaintiff David that costs will be apportioned equally among the named plaintiffs, and characterizes the outcome as a settlement in principle \"with each side to bear its own costs and bribes.\"" }
+  - { date: "Sep 2, 2026", entry: "Appellant notifies co-plaintiff David Lopez-Kurtz that costs will be apportioned equally among the named plaintiffs, and characterizes the outcome as a settlement in principle \"with each side to bear its own costs and bribes.\"" }
   - { date: "Sep 2, 2026", entry: "ORDER: motion to dismiss as moot (construed from the Commissioner's silence) DENIED. Voluntary cessation; capable of repetition yet evading review. Opinion to issue Sep 7 as scheduled. Aaron appointed Clerk of the Court on his own motion." }
 exhibits:
   - { label: "Memorandum Opinion and Order, No. 26-FF-0831 (U.S.F.F.C.A. Sep 2, 2026) (Dylus, Presiding Justice). PDF.", src: "/exhibits/26-FF-0831-order.png", pdf: "/filings/26-FF-0831-order.pdf" }
@@ -31,7 +31,7 @@ external:
 
 ## Background
 
-The League Draft is scheduled for Tuesday, September 8, 2026. Marc Goldich, a league member, moved the Commissioner on August 31 to move it to 10:00 p.m. so that he and one other member, identified in the record only as David, could attend Back-to-School Night at their children's school, an event scheduled by persons Goldich describes as possessing "even greater arbitrary authority than the Commissioner: school administrators."
+The League Draft is scheduled for Tuesday, September 8, 2026. Marc Goldich, a league member, moved the Commissioner on August 31 to move it to 10:00 p.m. so that he and one other member, David Lopez-Kurtz, could attend Back-to-School Night at their children's school, an event scheduled by persons Goldich describes as possessing "even greater arbitrary authority than the Commissioner: school administrators."
 
 Commissioner Erich Dylus, sitting as Presiding Justice of a court he styled the United States Fantasy Football Appeals Court, denied the motion with prejudice on September 2. His opinion identified the governing standard as whether he, "in his sole and gloriously arbitrary discretion, feels like granting the relief sought," cited *The Commissioner Says So*, 1 F.F. 1 (perpetual), for the proposition that his jurisdiction is "plenary and unreviewable," and resolved the question in three words. The order further directed that the Draft proceed "with all members in timely attendance and good spirits."
 

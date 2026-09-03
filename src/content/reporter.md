@@ -18,7 +18,7 @@ Fictional precedents cited on the site. Add a line whenever a post cites a new o
 
 - Marc Goldich: Appellant, Pro Se; "Father, League Member, and Victim of Administrative Overreach"; later "Still Litigating."
 - Erich Dylus: God Emperor Commissioner, Presiding Justice of the court below.
-- David: league member, second member of the Rule 23 class. Surname not in the record.
+- David Lopez-Kurtz: league member, second member of the Rule 23 class (confirmed by Larry 2026-09-02).
 - Drew Hinkes: published the filings on X.
 - Aaron: Clerk of the Court, self-appointed 2026-09-02 ("I am the clerk."). Surname not in the record.
-- David Kovari, Jacob Robinson, Nelson Rosario, Samir Patel, Andrew Thurman, Nick Pullman, Gerald Gallagher, David Lopez-Kurtz, Larry Florio: League members appearing in the chat record. Which David is the class member is not established; the class member stays "David."
+- David Kovari, Jacob Robinson, Nelson Rosario, Samir Patel, Andrew Thurman, Nick Pullman, Gerald Gallagher, Larry Florio: League members appearing in the chat record.

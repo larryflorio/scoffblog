@@ -20,7 +20,7 @@ League member David Kovari summarized the procedural posture for the group: "Cas
 
 Goldich later characterized the outcome in terms the Commissioner has not adopted. "Appellant accepts the Commissioner's confession of error," he wrote. "The parties appear to have reached a settlement in principle: 10P, with each side to bear its own costs and bribes."
 
-He also notified his co-plaintiff of the financial consequences. "David, as co-named plaintiff, this seems like an appropriate time to advise you that all fees, costs, and administrative expenses associated with this litigation will be apportioned equally among the named plaintiffs." David has not responded on the record.
+He also notified his co-plaintiff of the financial consequences. "David, as co-named plaintiff, this seems like an appropriate time to advise you that all fees, costs, and administrative expenses associated with this litigation will be apportioned equally among the named plaintiffs." Lopez-Kurtz has not responded on the record, though he did tell the chat his wife was "going to be so annoyed" when he explained the situation.
 
 ## Why the Court is keeping the case
 

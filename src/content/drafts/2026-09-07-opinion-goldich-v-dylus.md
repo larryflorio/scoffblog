@@ -3,7 +3,7 @@ title: "Opinion analysis: Court vacates draft-time order, holds that \"I don't w
 kicker: "OPINION ANALYSIS"
 author: "SCOFFblog Staff"
 date: 2026-09-07
-dek: "In its first opinion, the Court rejects the Phantom Clerk Doctrine, certifies a class of two, and orders the draft to 10 p.m. One Justice concurs in the judgment without recusing. One dissents from a draft board."
+dek: "In its first opinion, the Court rejects the Phantom Clerk Doctrine, certifies a class of two, and orders the draft to 10 p.m. Justice Lopez-Kurtz concurs in the judgment without recusing. One dissents from a draft board."
 case: "26-1-goldich-v-dylus"
 featured: true
 ---
@@ -19,7 +19,7 @@ featured: true
 <p>4. Rule 23 permits a class of two where the two are the only members who have children at the school in question, and the class is certified as "parents who occasionally pretend to prioritize their children over fantasy football." The Court expresses no view on whether the pretense is sincere. P. 4.</p>
 <p>5. The Draft shall commence at 10:00 p.m. on September 8, 2026. The Commissioner's further order that members attend "in good spirits" is beyond the power of any court and is vacated as well. P. 5.</p>
 <p>Vacated and remanded.</p>
-<p>PER CURIAM. DAVID, J., filed an opinion concurring in the judgment. One Justice dissented.</p>
+<p>PER CURIAM. LOPEZ-KURTZ, J., filed an opinion concurring in the judgment. One Justice dissented.</p>
 </div>
 
 ## Per curiam
@@ -52,9 +52,9 @@ Under ordinary abuse-of-discretion review the result is the same. A court that g
 
 ### IV
 
-Petitioner asks us to certify a class of two: himself and League member David, whose children attend the same school. The Commissioner does not oppose certification. He does not oppose anything, since he did not read the motion.
+Petitioner asks us to certify a class of two: himself and League member David Lopez-Kurtz, whose children attend the same school. The Commissioner does not oppose certification. He does not oppose anything, since he did not read the motion.
 
-Rule 23 asks whether the class is so numerous that joinder is impracticable. Two is not numerous. But joinder of David was, on this record, impracticable, because David did not want to be joined to a filing this long. Commonality and typicality are satisfied: same school, same night, same Commissioner. Adequacy of representation is satisfied by the fact that petitioner has now filed three documents in one day. The class is certified as defined in the notice of appeal: parents who occasionally pretend to prioritize their children over fantasy football. Whether the pretense is sincere is a question of fact for the children, and it is not before us.
+Rule 23 asks whether the class is so numerous that joinder is impracticable. Two is not numerous. But joinder of David was, on this record, impracticable, because Lopez-Kurtz did not want to be joined to a filing this long. Commonality and typicality are satisfied: same school, same night, same Commissioner. Adequacy of representation is satisfied by the fact that petitioner has now filed three documents in one day. The class is certified as defined in the notice of appeal: parents who occasionally pretend to prioritize their children over fantasy football. Whether the pretense is sincere is a question of fact for the children, and it is not before us.
 
 ### V
 
@@ -64,7 +64,7 @@ One further matter. The order below directed that the Draft proceed "with all me
 
 It is so ordered.
 
-## David, J., concurring in the judgment
+## Lopez-Kurtz, J., concurring in the judgment
 
 I join the Court's judgment. I write separately to note that I am a member of the certified class, that I did not recuse, and that nobody asked me to. The Commissioner's position throughout this case has been that no one may review him. I have no position on that. I have a Back-to-School Night at 7:00.
 
