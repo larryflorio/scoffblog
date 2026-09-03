@@ -5,7 +5,7 @@ author: "SCOFFblog Staff"
 date: 2026-09-02
 dek: "Marc Goldich declines to engage the admin-key theory, thanks amicus for calling his brief \"very good,\" and signs as Recipient of Complete Relief."
 case: "26-1-goldich-v-dylus"
-featured: true
+featured: false
 ---
 
 Marc Goldich filed his response to the Patel amicus brief late Wednesday. It is one page. He wants the Court to know that the brief it answers was seven.

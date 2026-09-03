@@ -18,6 +18,8 @@ Fictional precedents cited on the site. Add a line whenever a post cites a new o
 ## Other authorities in the record
 
 - League Constitution, art. I ("The Commissioner decides."). Cited passim by amicus Patel; never produced.
+- Fed. R. Civ. P. 24(a), intervention of right; Fed. R. Civ. P. 23(e), class settlement notice and approval (Patel motion to intervene).
+- Third Wedding Anniversary (Sept. 4, 2026) (controlling) (Patel motion to intervene).
 - *Marbury v. Madison*, 5 U.S. 137 (1803), "holding that someone gets to decide; cited by both sides for the same reason" (Patel amicus).
 
 ## S.C.F.F. (Supreme Court of Fantasy Football)
