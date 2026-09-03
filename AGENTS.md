@@ -23,6 +23,11 @@ Satirical site: the Supreme Court of Fantasy Football (SCOFF), styled after SCOT
 - Docket timeline entries follow filing order as Larry states it, not the order documents arrived.
 - Filings are primary sources republished verbatim: any redaction (children's names or ages, anything a member asks to keep out) happens in the document before it is copied into `public/filings`, never only in the site's prose.
 
+## Analysis pieces
+
+- Background and analysis posts are sourced reporting: dates, holdings, what each court or party actually said, quotations checked against the primary text. No narrator verdicts, epigram endings, reversal setups, or explained jokes. Satire enters through verbatim quotation of the parties, each with one flat attribution.
+- Images: photographs with alt text and a credit (Unsplash License, Commons CC with attribution, public domain); line art only where no photo subject exists. Every credit appears on the Photo Credits page.
+
 ## Content types
 
 - `posts`: kicker in {COURT NEWS, OPINION ANALYSIS, EMERGENCY DOCKET, RELIST WATCH, SCOFF FOCUS, STAT PACK, ARGUMENT ANALYSIS, PETITIONS WE'RE WATCHING}. Author is the desk, not a real person, unless a member writes one.
