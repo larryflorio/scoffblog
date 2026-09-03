@@ -5,7 +5,7 @@ author: "SCOFFblog Staff"
 date: 2026-09-02
 dek: "A three-page supplemental brief withdraws the request for relief and keeps the displeasure. \"Acquiescence is not waiver,\" a distinction \"well established in every marriage in the League.\""
 case: "26-1-goldich-v-dylus"
-featured: true
+featured: false
 ---
 
 Larry Florio, who two hours earlier asked the Court to vacate the 10:00 p.m. decree and impose a timelock on the Commissioner, filed a supplemental brief late Wednesday conceding that none of that is going to happen.
