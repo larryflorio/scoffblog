@@ -18,6 +18,9 @@ timeline:
   - { date: "Sep 2, 2026", entry: "Emergency Motion to Compel Judicial Review and to Vacate Improper Referral to the Clerk filed. Appellant objects to the Phantom Clerk Doctrine." }
   - { date: "Sep 2, 2026", entry: "Appellant's filings published to X by Drew Hinkes. Views exceed 660,000. Commissioner's position on the merits unchanged; his position on fame, evolving." }
   - { date: "Sep 2, 2026", entry: "Petition for certiorari before judgment GRANTED. Expedited briefing ordered. Briefs due Sep 4. Argument set for Sep 6 in the group chat." }
+  - { date: "Sep 2, 2026", entry: "Appellant announces in the League chat that he \"voluntarily dismisses all remaining claims.\" Commissioner confirms the Draft will move to 10:00 p.m. \"by authoritarian decree,\" citing his daughter's bedtime, and states: \"I grant nothing.\"" }
+  - { date: "Sep 2, 2026", entry: "Appellant notifies co-plaintiff David that costs will be apportioned equally among the named plaintiffs, and characterizes the outcome as a settlement in principle \"with each side to bear its own costs and bribes.\"" }
+  - { date: "Sep 2, 2026", entry: "ORDER: motion to dismiss as moot (construed from the Commissioner's silence) DENIED. Voluntary cessation; capable of repetition yet evading review. Opinion to issue Sep 7 as scheduled. Aaron appointed Clerk of the Court on his own motion." }
 exhibits:
   - { label: "Memorandum Opinion and Order, No. 26-FF-0831 (U.S.F.F.C.A. Sep 2, 2026) (Dylus, Presiding Justice). PDF.", src: "/exhibits/26-FF-0831-order.png", pdf: "/filings/26-FF-0831-order.pdf" }
   - { label: "Notice of Appeal and Emergency Motion for Reversal, No. 26-FF-0831 (U.S.F.F.C.A. Sep 2, 2026). Filed pro se. PDF.", src: "/exhibits/26-FF-0831-notice-of-appeal.png", pdf: "/filings/26-FF-0831-notice-of-appeal.pdf" }
@@ -33,6 +36,10 @@ The League Draft is scheduled for Tuesday, September 8, 2026. Marc Goldich, a le
 Commissioner Erich Dylus, sitting as Presiding Justice of a court he styled the United States Fantasy Football Appeals Court, denied the motion with prejudice on September 2. His opinion identified the governing standard as whether he, "in his sole and gloriously arbitrary discretion, feels like granting the relief sought," cited *The Commissioner Says So*, 1 F.F. 1 (perpetual), for the proposition that his jurisdiction is "plenary and unreviewable," and resolved the question in three words. The order further directed that the Draft proceed "with all members in timely attendance and good spirits."
 
 Goldich appealed to the United States Fantasy Football Court of Appeals, which did not exist until he created it. The Commissioner responded that he was "not reading this essay" and referred the matter to the Office of the Clerk, which is a trash bin. Goldich moved to compel, then petitioned this Court for certiorari before judgment, on the ground that the court below cannot render judgment because the court below is also the Commissioner, and the Commissioner has referred himself to the trash bin's jurisdiction, not the other way around.
+
+## The decree
+
+Within hours of the filings going viral, the Commissioner moved the Draft to 10:00 p.m. He did so, in his words, "by authoritarian decree," for the stated reason that the later time suits his daughter's bedtime, and he insists that he "grant[s] nothing." Goldich announced that he "voluntarily dismisses all remaining claims" and later described a "settlement in principle: 10P, with each side to bear its own costs and bribes." The Court has declined to treat the case as moot: a decree that grants nothing protects nothing, and the conflict recurs annually.
 
 ## What the Court granted
 

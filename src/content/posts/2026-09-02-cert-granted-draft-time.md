@@ -5,7 +5,7 @@ author: "SCOFFblog Staff"
 date: 2026-09-02
 dek: "The Court will decide before Tuesday whether a Commissioner can end an appeal by not reading it. The Commissioner has not read the grant."
 case: "26-1-goldich-v-dylus"
-featured: true
+featured: false
 ---
 
 The Supreme Court of Fantasy Football on Wednesday granted certiorari before judgment in *Goldich v. Dylus*, No. 26-1, agreeing to decide whether the Commissioner's denial of a motion to move the League Draft from its scheduled Tuesday slot to 10:00 p.m. can be reviewed by anyone, and if so, by whom.
