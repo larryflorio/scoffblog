@@ -80,6 +80,7 @@ html.m-lock { overflow: hidden; }
 .thumb { display: block; aspect-ratio: 16 / 7.4; background: var(--cream-2); overflow: hidden; margin-bottom: 14px; }
 .thumb.tall { aspect-ratio: 555 / 435; }
 .thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.thumb img.editorial-art { object-position: center; }
 .thumb.seal { display: flex; align-items: center; justify-content: center; background: var(--navy); }
 .thumb.seal svg { width: 46%; height: auto; }
 .front .center .headline { font-size: 22.4px; }
@@ -88,6 +89,7 @@ html.m-lock { overflow: hidden; }
 .summit { border: 1px solid var(--rule); display: grid; grid-template-columns: 432px 1fr; margin: 4px 0 60px; background: var(--white); }
 .summit .img { background: var(--navy); min-height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
 .summit .img img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.summit .img img.editorial-art { object-position: center; }
 .summit .txt { padding: 28px 30px; }
 .summit .txt h3 { font-size: 24px; color: var(--navy); margin-bottom: 8px; }
 .summit .txt p { font-size: 14px; color: var(--ink-2); max-width: 520px; }
@@ -124,7 +126,7 @@ html.m-lock { overflow: hidden; }
 .latest h2 { font-size: 40px; margin-bottom: 26px; }
 .hero { position: relative; background: var(--navy); min-height: 560px; display: flex; align-items: flex-end; padding: 50px 44px; overflow: hidden; }
 .hero .bg { position: absolute; inset: 0; opacity: 0.22; }
-.hero .bg img { width: 100%; height: 100%; object-fit: cover; object-position: top; filter: grayscale(1); }
+.hero .bg img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
 .hero .bg svg { position: absolute; right: -60px; top: -40px; width: 700px; height: 700px; opacity: 0.35; }
 .hero .inner { position: relative; max-width: 520px; }
 .hero .kicker { background: rgba(255,255,255,0.18); color: var(--white); }
@@ -158,7 +160,10 @@ html.m-lock { overflow: hidden; }
 .authors h2 { font-size: 40px; margin-bottom: 26px; }
 .authors .row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
 .acard { border: 1px solid var(--rule); background: var(--white); }
-.acard .top { height: 150px; background: var(--cream-2); display: flex; align-items: flex-end; padding: 14px 18px; font-size: 13px; color: var(--ink-3); font-style: italic; }
+.acard .top { height: 150px; background: var(--cream-2); position: relative; overflow: hidden; display: flex; align-items: flex-end; padding: 14px 18px; font-size: 13px; color: var(--cream); font-style: italic; }
+.acard .top img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.acard .top::after { content: ""; position: absolute; inset: 45% 0 0; background: linear-gradient(transparent, rgba(7,13,35,.8)); }
+.acard .top span { position: relative; z-index: 1; }
 .acard .body { padding: 16px 18px 20px; }
 .acard .headline { font-size: 20px; }
 .authors .meet { text-align: right; margin-top: 30px; }
@@ -193,7 +198,7 @@ footer .disclaimer { padding: 0 42px 26px; font-size: 12px; color: rgba(255,255,
 .avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--cream-2); flex: none; }
 .figure { margin: 0 0 30px; }
 .figure .thumb { aspect-ratio: 848 / 565; margin-bottom: 8px; }
-.figure figcaption { font-size: 13px; color: var(--ink-3); }
+.figure figcaption { min-height: 1em; font-size: 13px; color: var(--ink-3); }
 .prose { font-size: 17px; line-height: 1.5; color: var(--ink); }
 .prose p { margin: 0 0 18px; }
 .prose a { color: var(--navy); text-decoration: underline; text-underline-offset: 2px; text-decoration-color: rgba(24,40,98,0.4); }
@@ -389,7 +394,7 @@ table.docket td.n { white-space: nowrap; color: var(--ink-3); }
   .tl-key span[style*="fffedb"]::before { background: #3a3620; }
   .tl-key span[style*="dedede"]::before { background: #2e3140; }
   .tl-key span[style*="#fff"]::before { background: var(--white); }
-  .thumb img, .summit .img img, .exhibit img { filter: brightness(0.88); }
+  .thumb img:not(.editorial-art), .summit .img img:not(.editorial-art), .exhibit img { filter: brightness(0.88); }
   .exhibit img { border-color: var(--rule-2); }
   .cal td.today span.n { background: #2a3f8f; }
   .newsletter form, .newsletter input { background: var(--white); color: var(--ink); }

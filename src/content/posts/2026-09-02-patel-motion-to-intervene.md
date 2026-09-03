@@ -4,6 +4,7 @@ kicker: "COURT NEWS"
 author: "SCOFFblog Staff"
 date: 2026-09-02T21:33:54-04:00
 dek: "The amicus for the Commissioner is now against him. \"Movant regrets that he was right about the standard and wrong about the man.\""
+image: "/art/motion-intervene.svg"
 case: "26-1-goldich-v-dylus"
 featured: false
 ---

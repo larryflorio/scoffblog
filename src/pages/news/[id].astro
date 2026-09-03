@@ -3,6 +3,7 @@ import { u } from '../../lib';
 import Base from '../../layouts/Base.astro';
 import { getCollection, getEntry, render } from 'astro:content';
 import { fmtShort, byDate } from '../../lib';
+import { artFor } from '../../art';
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
   return posts.map(p => ({ params: { id: p.id }, props: { post: p } }));
@@ -20,6 +21,7 @@ const related = (await getCollection('posts')).filter(p => p.id !== post.id).sor
         <h1>{post.data.title}</h1>
         <div class="byline"><span class="avatar"></span><span><i>By</i> <span class="name">{post.data.author}</span><span class="sep">/</span><span class="date">{fmtShort(post.data.date)}</span></span></div>
       </div>
+      <figure class="figure"><div class="thumb"><img class="editorial-art" src={u(artFor(post))} alt="" /></div><figcaption aria-hidden="true"></figcaption></figure>
       {post.data.dek && <p class="lede">{post.data.dek}</p>}
       <div class="prose"><Content /></div>
     </article>

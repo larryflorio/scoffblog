@@ -4,6 +4,7 @@ kicker: "COURT NEWS"
 author: "SCOFFblog Staff"
 date: 2026-09-02T21:14:10-04:00
 dek: "Samir Patel, League member and holder of zero admin keys, files in support of the Commissioner. He would like the Court to consider whether any of this is real."
+image: "/art/amicus-patel.svg"
 case: "26-1-goldich-v-dylus"
 featured: false
 ---

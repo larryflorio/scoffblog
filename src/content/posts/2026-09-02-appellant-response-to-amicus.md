@@ -4,6 +4,7 @@ kicker: "COURT NEWS"
 author: "SCOFFblog Staff"
 date: 2026-09-02T21:18:58-04:00
 dek: "Marc Goldich declines to engage the admin-key theory, thanks amicus for calling his brief \"very good,\" and signs as Recipient of Complete Relief."
+image: "/art/response-amicus.svg"
 case: "26-1-goldich-v-dylus"
 featured: false
 ---

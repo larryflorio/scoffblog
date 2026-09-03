@@ -4,6 +4,7 @@ kicker: "EMERGENCY DOCKET"
 author: "SCOFFblog Staff"
 date: 2026-09-02T19:05:09-04:00
 dek: "The emergency motion to compel judicial review objects to the referral of a live appeal to a trash bin."
+image: "/art/motion-to-compel.svg"
 case: "26-1-goldich-v-dylus"
 ---
 

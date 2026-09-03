@@ -4,6 +4,7 @@ kicker: "COURT NEWS"
 author: "SCOFFblog Staff"
 date: 2026-09-02T20:51:36-04:00
 dek: "The appellant dismissed his claims within the hour. The Commissioner says the new time is for his daughter's bedtime. The Court says a Commissioner who grants nothing can ungrant it, and the opinion will issue Monday."
+image: "/art/decree-not-moot.svg"
 case: "26-1-goldich-v-dylus"
 featured: false
 ---

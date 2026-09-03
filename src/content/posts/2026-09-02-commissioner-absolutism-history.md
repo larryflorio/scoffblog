@@ -4,6 +4,7 @@ kicker: "SCOFF FOCUS"
 author: "SCOFFblog Staff"
 date: 2026-09-02T22:05:00-04:00
 dek: "From Landis to Goodell to \"I don't want to,\" the office has always claimed the last word. The courts have mostly agreed. This League's courts are only three days old, and they are already discovering why."
+image: "/art/absolutism-history.svg"
 case: "26-1-goldich-v-dylus"
 ---
 

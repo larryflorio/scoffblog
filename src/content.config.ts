@@ -9,6 +9,7 @@ const posts = defineCollection({
     author: z.string(),
     date: z.coerce.date(),
     dek: z.string().optional(),
+    image: z.string().optional(),
     case: z.string().optional(), // slug of related case
     featured: z.boolean().default(false),
   }),
